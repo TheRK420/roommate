@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="keywords" content="" />
+		<meta name="author" content="" />
+		<meta name="robots" content="" />
+		<meta name="description" content="Roommate" />
+		<meta property="og:title" content="Roommate" />
+		<meta property="og:description" content="Roommate" />
+		<meta property="og:image" content="" />
+		<meta name="format-detection" content="telephone=no">
+
+		<!-- FAVICONS ICON -->
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+
+		<!-- PAGE TITLE HERE -->
+		<title>Roommate</title>
+
+		<!-- MOBILE SPECIFIC -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!--[if lt IE 9]>
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+		<!-- STYLESHEETS
+	<link rel="stylesheet" type="text/css" href="static/roommate/ss/plugins.css">
+	<link rel="stylesheet" type="text/css" href="static/roommate/css/style.css">-->
+		<link rel="stylesheet" type="text/css" href="static/roommate/css/templete.css">
+		<link class="skin" rel="stylesheet" type="text/css" href="static/roommate/css/skin/skin-1.css">
+		<link rel="stylesheet" href="static/roommate/css/all.min.css">
+		<script src="https://kit.fontawesome.com/8695d3e87f.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" type="text/css" href="static/roommate/css/plugins.css">
+		<link rel="stylesheet" type="text/css" href="static/roommate/css/style.css">
+		<link rel="stylesheet" type="text/css" href="static/roommate/css/templete.css">
+		<link class="skin" rel="stylesheet" type="text/css" href="static/roommate/css/skin/skin-1.css">
+		<link rel="stylesheet" type="text/css" href="static/roommate/css/star-rating-svg.css">
+		<link rel="stylesheet" type="text/css" href="static/roommate/plugins/editor/jquery-te-1.4.0.css">
+		<link rel="stylesheet" type="text/css" href="static/roommate/plugins/drop/imageuploadify.min.css">
+		<link rel="stylesheet" href="static/roommate/plugins/tag-editor/jquery.tag-editor.css">
+
+
+
+	</head>
+
+	<body id="bg">
+		<div id="loading-area"></div>
+		<div class="page-wraper">
+			<!-- header -->
+			<header class="site-header main-bar-wraper mo-left">
+				<!-- main header -->
+				<div class="sticky-header main-bar-wraper navbar-expand-lg">
+					<div class="main-bar clearfix ">
+						<div class="container clearfix">
+							<!-- website logo -->
+							<div class="logo-header mostion">
+								<a href="home.html" class="logo-1"><img
+										src="static/roommate/images/ROOMMATE-logo-black.png" alt=""></a>
+								<a href="home.html" class="logo-2"><img
+										src="static/roommate/images/ROOMMATE-logo-black.png" alt="Roommates"></a>
+							</div>
+							<!-- nav toggle button -->
+							<button class="navbar-toggler collapsed navicon justify-content-end" type="button"
+								data-toggle="collapse" data-target="#navbarNavDropdown"
+								aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+							<!-- extra nav -->
+							<div class="extra-nav">
+								<div class="extra-cell">
+									{% if x %}
+									<div class="extra-cell">
+										<a href="logout.html" class="site-button-link white"><i
+												class="ti-import m-r5 rotate90"></i> Logout</a>
+										<!-- <a href="add-listing.html" class="site-button radius-xl m-l10"><i
+										class="fa fa-plus m-r5"></i> LET US CONNECT</a> -->
+									</div>
+									{% else %}
+									<div class="extra-cell">
+										<a href="logout.html" class="site-button-link white"><i
+												class="ti-import m-r5 rotate90"></i> Sign In</a>
+										<!-- <a href="add-listing.html" class="site-button radius-xl m-l10"><i
+										class="fa fa-plus m-r5"></i> LET US CONNECT</a> -->
+									</div>
+									{% endif %}
+								</div>
+							</div>
+							<!-- main nav -->
+							<div class="header-nav navbar-collapse collapse justify-content-end" id="navbarNavDropdown">
+								<ul class="nav navbar-nav">
+									<li><a href="home.html">Home</a>
+										<!--<ul class="sub-menu">
+								<li><a href="index.html">Home 1</a></li>
+								 <li><a href="index-2.html">Home 2<span class="tag-new">New</span></a></li>
+								<li><a href="index-3.html">Home 3<span class="tag-new">New</span></a></li>
+							</ul>-->
+									</li>
+									<li class="down"><a href="#">Services <i class="fa fa-chevron-down"></i></a>
+										<ul class="sub-menu">
+											<li>
+												<p class="serv">Hostels</p>
+											</li>
+											<li>
+												<p class="serv">PG's</p>
+											</li>
+											<li>
+												<p class="serv">Flats</p>
+											</li>
+											<li>
+												<p class="serv">Food Delivery</p>
+											</li>
+											<li>
+												<p class="serv">Laundary Service</p>
+											</li>
+											<li>
+												<p class="serv">Cab Service</p>
+											</li>
+											<li>
+												<p class="serv">Mobile Repairing</p>
+											</li>
+											<li>
+												<p class="serv">Laptop Repairing</p>
+											</li>
+											<li>
+												<p class="serv">Bus Service</p>
+											</li>
+											<li>
+												<p class="serv">Wifi Service</p>
+											</li>
+											<li>
+												<p class="serv">Bike Rental</p>
+											</li>
+											<li>
+												<p class="serv">Courier Service</p>
+											</li>
+											<li>
+												<p class="serv">Shoes Laundry</p>
+											</li>
+										</ul>
+									</li>
+									<!--<li class="down"><a href="#">Listings <i class="fa fa-chevron-down"></i></a>
+							<ul class="sub-menu">
+								<li><a href="add-listing.html">Add Listing<span class="tag-new">New</span></a></li>
+								<li><a href="#">Listings <i class="fa fa-angle-right"></i></a>
+									<ul class="sub-menu">
+										<li><a href="listing.html">Listing</a></li>
+										<li><a href="listing-left-sidebar.html">Listing Left Sidebar</a></li>
+										<li><a href="listing-right-sidebar.html">Listing Right Sidebar</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Listing Grid <i class="fa fa-angle-right"></i></a>
+									<ul class="sub-menu">
+										<li><a href="listing-grid-left-sidebar.html">Left Sidebar</a></li>
+										<li><a href="listing-grid-right-sidebar.html">Right Sidebar</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Listing Map <i class="fa fa-angle-right"></i></a>
+									<ul class="sub-menu">
+										<li><a href="listing-grid-map-left-sidebar.html">Left Sidebar</a></li>
+										<li><a href="listing-grid-map-right-sidebar.html">Right Sidebar</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Listing Details <i class="fa fa-angle-right"></i></a>
+									<ul class="sub-menu">
+										<li><a href="listing-details.html">Listing Details 1</a></li>
+										<li><a href="listing-details-2.html">Listing Details 2<span class="tag-new">New</span></a></li>
+										<li><a href="listing-details-3.html">Listing Details 3<span class="tag-new">New</span></a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>-->
+									<li><a href="contact">Contact Us</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- main header END -->
+			</header>
+			<!-- header END -->
+
+
+		
+			<div class="section-full listing-details-content" style="background-image:url(static/roommate/images/pt4.png);">
+				<div class="container">
+					<div class="tab-content">
+						<div id="listing_home" class="tab-pane active">
+							<div class="row">
+								<!-- Left part start -->
+								<div class="col-xl-8 col-lg-7 col-md-12">
+									<!--<div class="content-box">
+									<div class="content-header">
+										<h3 class="title"><i class="la la-star-o m-r5"></i> average reviews</h3>
+									</div>
+									<div class="content-body">
+										<div class="average-reviews-box">
+											<div class="average-reviews-single">
+												<div class="average-reviews-info">
+													<h4 class="average-reviews">7.7</h4>
+													<div class="clearfix">
+														<h4 class="average-reviews-in">/ 10</h4>
+														<span>Quality</span>
+													</div>
+												</div>
+											</div>
+											<div class="average-reviews-list">
+												<ul>
+													<li>
+														<div class="average-reviews-info">
+															<span>Quality</span>
+															<h4 class="average-reviews">8.5</h4>
+														</div>
+													</li>
+													<li>
+														<div class="average-reviews-info">
+															<span>Location</span>
+															<h4 class="average-reviews">7.5</h4>
+														</div>
+													</li>
+													<li>
+														<div class="average-reviews-info">
+															<span>Space</span>
+															<h4 class="average-reviews">7.4</h4>
+														</div>
+													</li>
+													<li>
+														<div class="average-reviews-info">
+															<span>Service</span>
+															<h4 class="average-reviews">7.9</h4>
+														</div>
+													</li>
+													<li>
+														<div class="average-reviews-info">
+															<span>Price</span>
+															<h4 class="average-reviews">7.4</h4>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="content-footer content-btn text-center">
+										<a data-toggle="modal" data-target="#favorite" href="javascript:void(0);" class="site-button-link black"><i class="la la-star-o m-r5"></i> ADD A REVIEW</a>
+									</div>
+								</div>
+								<div class="content-box">
+									<div class="content-body">
+										<div class="sale-box">
+											<div class="sale-date">
+												<h2 class="title"><a href="javascript:void(0);">12/20/2020 <i class="la la-angle-double-right m-l5"></i></a></h2>
+											</div>
+											<div class="sale-info">
+												<h3 class="title">50% OFF</h2>
+												<p>Shop your Favorites Before They're gone</p>
+											</div>
+										</div>
+									</div>
+								</div>-->
+									<br><br><br>
+									{% if not a %}
+									{% if detail %}
+									<p style="color:green">KYC verified!</p>
+									{% else %}
+									<p style="color:red">KYC verification pending!</p>
+									{% endif %}
+									{% endif %}
+									<div class="content-box">
+										<div class="content-header">
+											<h3 class="title"></i><b>WELCOME {{User.username}} </b> </h3>
+										</div>
+
+										<div class="content-body">
+											<p>Fill your details !
+												<p>
+													{% if a %}
+													<a href="add-listing.html" class="site-button radius-xl m-l10"><i
+															class="fa fa-plus m-r5"></i> FILL KYC FORM</a>
+													<!-- <a href="" class="site-button radius-xl m-l10"><i
+													class="fa fa-plus m-r5"></i> EDIT PROFILE</a> -->
+													{% else %}
+													<!-- <a href="" class="site-button radius-xl m-l10"><i
+													class="fa fa-plus m-r5"></i> EDIT PROFILE</a> -->
+													{% endif %}
+										</div>
+									</div>
+									<div class="content-box">
+										<div class="content-header">
+											<h3 class="title"></i><b>Dashboard</b></h3>
+										</div>
+										<div class="content-body">
+											<p>Add your rooms.
+												<p>
+													{% if detail %}
+													<a href="{% url 'dashboard' %}" style="text-decoration:none;"
+														class="site-button radius-xl m-l10"><i
+															class="fa fa-plus m-r5"></i>Dashboard</a>
+													<!--<button type="button" name="MyProducts" disabled><a href="LET-US-CONNECT.html" class="site-button radius-xl m-l10"><i class="fa fa-plus m-r5"></i> MY PRODUCTS</a></button>  -->
+													{% endif %}
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+			<!-- Footer -->
+			<footer class="site-footer">
+				<div class="footer-top">
+					<div class="container">
+						<div class="row">
+							<div class="col-xl-5 col-lg-4 col-md-12 col-sm-12">
+								<div class="widget">
+									<img src="static/roommate/images/ROOMMATE-logo-white.png" class="m-b15" alt=""
+										width="180">
+									<p class="text-capitalize m-b20">We are a group of young entrepreneurs seeking to
+										change
+										the country and create jobs. In our venture we are now here with a new
+										subsidiary
+										company ROOMMATE. A service that will look after all students and staff who
+										leave
+										their homes to improve their lives. ROOMMATE is here to make their stays
+										comfortable
+										and better, providing services ranging from verified rooms to laundry services
+										and
+										food recommendations.</p>
+									<div class="subscribe-form m-b20">
+										<form class="dzSubscribe" action="script/mailchamp.php" method="post">
+											<div class="dzSubscribeMsg"></div>
+											<div class="input-group">
+												<input name="dzEmail" required="required" class="form-control"
+													placeholder="Your Email Address" type="email">
+												<span class="input-group-btn">
+													<button name="submit" value="Submit" type="submit"
+														class="site-button radius-xl">Subscribe</button>
+												</span>
+											</div>
+										</form>
+									</div>
+									<ul class="list-inline m-a0">
+										<li><a href="javascript:void(0);" class="site-button facebook circle "><i
+													class="fa fa-facebook"></i></a></li>
+										<!-- <li><a href="javascript:void(0);" class="site-button google-plus circle "><i class="fa fa-google-plus"></i></a></li> -->
+										<li><a href="javascript:void(0);" class="site-button linkedin circle "><i
+													class="fa fa-linkedin"></i></a></li>
+										<li><a href="javascript:void(0);" class="site-button instagram circle "><i
+													class="fa fa-instagram"></i></a></li>
+										<!-- <li><a href="javascript:void(0);" class="site-button twitter circle "><i class="fa fa-twitter"></i></a></li> -->
+									</ul>
+								</div>
+							</div>
+							<div class="col-xl-4 col-lg-5 col-md-7 col-sm-12 col-12">
+								<div class="widget border-0">
+									<h5 class="m-b30 text-white">Frequently Asked Questions</h5>
+									<ul class="list-2 list-line">
+										<li><a href="javascript:void(0);">Verified Hostel</a></li>
+										<li><a href="javascript:void(0);">Verified PG's</a></li>
+										<li><a href="javascript:void(0);">Verified Flats</a></li>
+										<li><a href="javascript:void(0);">Food Delivery</a></li>
+										<li><a href="javascript:void(0);">Laundry</a></li>
+										<li><a href="javascript:void(0);">Stationary</a></li>
+										<li><a href="javascript:void(0);">Cab Services</a></li>
+										<li><a href="javascript:void(0);">Bus Services</a></li>
+										<li><a href="javascript:void(0);">Mobile Repairing</a></li>
+										<li><a href="javascript:void(0);">Laptop Repairing</a></li>
+										<li><a href="javascript:void(0);">Wifi Services</a></li>
+										<li><a href="javascript:void(0);">Bike Rentals</a></li>
+										<li><a href="javascript:void(0);">Courier Services</a></li>
+										<li><a href="javascript:void(0);">Shoes Laundry</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-xl-3 col-lg-3 col-md-5 col-sm-12 col-12">
+								<div class="widget widget_getintuch">
+									<h5 class="m-b30 text-white">Contact us</h5>
+									<ul>
+										<li><i class="ti-location-pin"></i><strong>address</strong> Bandra, Mumbai</li>
+										<li><i class="ti-mobile"></i><strong>phone</strong>8530392350 (24/7 Support)
+											<li style="font-size: 0.7em">
+												<i class="ti-email"></i
+												><strong>email</strong>Hello@roommate.techmihirnaik.in
+											  </li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12 text-center">
+								<span class="fbottom-like"> © 2021 by techmihirnaik.in <a class="like-btn"
+										href="javascript:void(0)"><i class="fa fa-heart"></i></a> Proudly created with
+									techmihirnaik.in </span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- Footer END-->
+			<button class="scroltop fa fa-chevron-up"></button>
+		</div>
+		<!-- JAVASCRIPT FILES ========================================= -->
+		<script src="static/roommate/js/jquery.min.js"></script><!-- JQUERY.MIN JS -->
+		<script src="static/roommate/plugins/bootstrap/js/popper.min.js"></script><!-- BOOTSTRAP.MIN JS -->
+		<script src="static/roommate/plugins/bootstrap/js/bootstrap.min.js"></script><!-- BOOTSTRAP.MIN JS -->
+		<script src="static/roommate/plugins/bootstrap-select/bootstrap-select.min.js"></script><!-- FORM JS -->
+		<script src="static/roommate/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script>
+		<!-- FORM JS -->
+		<script src="static/roommate/plugins/magnific-popup/magnific-popup.js"></script><!-- MAGNIFIC POPUP JS -->
+		<script src="static/roommate/plugins/counter/waypoints-min.js"></script><!-- WAYPOINTS JS -->
+		<script src="static/roommate/plugins/counter/counterup.min.js"></script><!-- COUNTERUP JS -->
+		<script src="static/roommate/plugins/imagesloaded/imagesloaded.js"></script><!-- IMAGESLOADED -->
+		<script src="static/roommate/plugins/masonry/masonry-3.1.4.js"></script><!-- MASONRY -->
+		<script src="static/roommate/plugins/masonry/masonry.filter.js"></script><!-- MASONRY -->
+		<script src="static/roommate/plugins/rangeslider/rangeslider.js"></script><!-- RANGESLIDER -->
+		<script src="static/roommate/plugins/owl-carousel/owl.carousel.js"></script><!-- OWL SLIDER -->
+		<script src="static/roommate/js/custom.js"></script><!-- CUSTOM FUCTIONS  -->
+		<script src="static/roommate/js/dz.carousel.js"></script><!-- SORTCODE FUCTIONS  -->
+		<script src="static/roommate/js/dz.ajax.js"></script><!-- CONTACT JS  -->
+
+	</body>
+
+</html>

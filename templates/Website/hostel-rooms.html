@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="robots" content="" />
+    <meta name="description" content="Roommate" />
+    <meta property="og:title" content="Roommate" />
+    <meta property="og:description" content="Roommate" />
+    <meta property="og:image" content="" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- FAVICONS ICON -->
+    <link
+      rel="icon"
+      href="static/student/images/roomlogo.jpeg"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="static/student/images/roomlogo.jpeg"
+    />
+
+    <!-- PAGE TITLE HERE -->
+    <title>Roommate</title>
+
+    <!-- MOBILE SPECIFIC -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- STYLESHEETS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="static/student/css/plugins.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="static/student/css/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="static/student/css/templete.css"
+    />
+    <link
+      class="skin"
+      rel="stylesheet"
+      type="text/css"
+      href="static/student/css/skin/skin-1.css"
+    />
+  </head>
+
+  <body id="bg">
+    <div id="loading-area"></div>
+    <div class="page-wraper">
+      <!-- header -->
+      <header class="site-header header-transparent mo-left">
+        <!-- main header -->
+        <div class="sticky-header main-bar-wraper navbar-expand-lg">
+          <div class="main-bar clearfix">
+            <div class="container clearfix">
+              <!-- website logo -->
+              <div class="logo-header mostion">
+                <a href="home.html" class="logo-1"
+                  ><img
+                    src="static/student/images/ROOMMATE-logo-white.png"
+                    alt=""
+                /></a>
+                <a href="home.html" class="logo-2"
+                  ><img
+                    src="static/student/images/ROOMMATE-logo-black.png"
+                    alt="Roommates"
+                /></a>
+              </div>
+              <!-- nav toggle button -->
+              <button
+                class="navbar-toggler collapsed navicon justify-content-end"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+              <!-- extra nav -->
+              <div class="extra-nav">
+                <div class="extra-cell">
+                  <a href="logout.html" class="site-button-link white"
+                    ><i class="ti-import m-r5 rotate90"></i>Logout</a
+                  >
+                  <a
+                    href="{% url 'myprofile' %}"
+                    class="site-button radius-xl m-l10"
+                    ><i class="fa fa-plus m-r5"></i>MY ACCOUNT</a
+                  >
+                </div>
+              </div>
+              <!-- main nav -->
+              <div
+                class="header-nav navbar-collapse collapse justify-content-end"
+                id="navbarNavDropdown"
+              >
+                <ul class="nav navbar-nav">
+                  <li><a href="home.html">Home</a></li>
+                  <li><a href="contact">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- main header END -->
+      </header>
+      <!-- header END -->
+      <!-- Content -->
+      <div class="page-content bg-white">
+        <!-- inner page banner -->
+        <div
+          class="dlab-bnr-inr dlab-bnr-inr-sm overlay-black-middle"
+          style="
+            background-image: url('static/student/images/13027.jpg');
+            padding-top: 6.5em;
+          "
+        >
+          <div class="container">
+            <div class="dlab-bnr-inr-entry">
+              <h1 class="text-white">{{hostel_name}}</h1>
+              <p>Find & Get Your Dream Place.</p>
+              <!-- Breadcrumb row -->
+              <div class="breadcrumb-row">
+                <ul class="list-inline">
+                  <li><a href="home.html">Home</a></li>
+                </ul>
+              </div>
+              <!-- Breadcrumb row END -->
+            </div>
+          </div>
+        </div>
+        <!-- inner page banner END -->
+        <!-- contact area -->
+        <div class="content-block">
+          <div class="section-full content-inner bg-white" style="background-image:url(static/roommate/images/pt4.png);">
+            <div class="container">
+              <div class="row" style="flex-wrap: wrap-reverse">
+                <div class="col-lg-8 col-md-6">
+                  <div class="row">
+                    {% for i,j in rooms %}
+
+                    <div class="col-lg-12">
+                      <div class="listing-bx listing-half m-b30">
+                        <div class="listing-media">
+                          <a
+                            href="{% url 'details' Category=i.category email=i.email gender=i.gender %}"
+                            ><img src="{{ i.image2.url }}" alt=""
+                          /></a>
+                          <ul class="wish-bx">
+                            <li>
+                              <a class="like-btn" href="javascript:void(0)"
+                                ><i class="fa fa-heart"></i
+                              ></a>
+                            </li>
+                            <li>
+                              <a
+                                class="info-btn"
+                                href="{% url 'details' Category=i.category email=i.email gender=i.gender %}"
+                                ><i class="fa fa-leaf"></i
+                              ></a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="listing-info">
+                          <ul class="featured-star">
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                          </ul>
+                          <h3 class="title">
+                            <a
+                              href="{% url 'details' Category=i.category email=i.email gender=i.gender %}"
+                              >{{i.category}} - {{i.gender}}</a
+                            >
+                          </h3>
+                          <p>{{i.description|safe}}</p>
+                          <ul class="place-info">
+                            <li class="place-location">
+                              <ul style="display: flex; margin-right: 0px">
+                                <li style="text-decoration: line-through">
+                                  <i class="fa fa-inr" aria-hidden="true"
+                                    >{{j}}</i
+                                  >
+                                </li>
+                                <li>| {{i.month}}</li>
+                                <li class="open" style="margin-right: 0px">
+                                  {{i.discount}}% OFF
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="open">
+                              <i class="fa fa-check"></i>Available
+                            </li>
+                          </ul>
+                          <span style="font-weight: 600; font-size: 1.5em">
+                            <i class="fa fa-inr" aria-hidden="true"></i
+                            >{{i.price}}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    {% endfor %}
+
+                    <!-- Pagination start -->
+                    <!-- <div class="pagination-bx clearfix text-center">
+										<ul class="pagination">
+											{% if pagi_rooms.has_previous %}
+											<li class="pagination__item"><a
+													class="pagination__arrow pagination__arrow--prev"
+													href="?page=1">&laquo;</a>
+											<li class="previous"><a href="?page={{pagi_rooms.previous_page_number}}"><i
+														class="fa fa-arrow-left"></i></a></li>
+											{% endif %}
+
+
+											{% for num in pagi_rooms.paginator.page_range %}
+											{% if pagi_rooms.number == num %}
+											<li class="pagination__item active"><a class=" pagination__link"
+													href="?page={{num}}"><strong>{{num}}</strong></a>
+											</li>
+											{% elif num > pagi_rooms.number|add:'-3' and num < pagi_rooms.number|add:'3'%}
+												 <li class="pagination__item"><a
+													class="pagination__arrow pagination__arrow--prev"
+													href="?page={{num}}">{{num}}</a>
+												</li>
+												{% endif %}
+												{% endfor %}
+
+												{% if pagi_rooms.has_next %}
+												<li class="next"><a href="?page={{pagi_rooms.next_page_number}}"><i
+															class="fa fa-arrow-right"></i></a></li>
+												<li class="pagination__item"><a
+														class="pagination__arrow pagination__arrow--prev"
+														href="?page={{pagi_rooms.paginator.num_pages}}">&raquo;</a>
+												</li>
+												{% endif %}
+										</ul>
+									</div> -->
+                    <!-- Pagination END -->
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="sticky-top">
+                    <div class="add p-tb30">
+                      <img
+                        src="static/student/images/banner/BOOKING.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- contact area END -->
+      </div>
+      <!-- Content END-->
+      <!-- Featured Destinations End -->
+      <footer class="site-footer">
+        <div class="footer-top">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-5 col-lg-4 col-md-12 col-sm-12">
+                <div class="widget">
+                  <img
+                    src="static/roommate/images/ROOMMATE-logo-white.png"
+                    class="m-b15"
+                    alt=""
+                    width="180"
+                  />
+                  <p class="m-b20">
+                    We are a group of young entrepreneurs seeking to change the
+                    country and create jobs. In our venture we are now here with
+                    a new subsidiary company ROOMMATE. A service that will look
+                    after all students and staff who leave their homes to
+                    improve their lives. ROOMMATE is here to make their stays
+                    comfortable and better, providing services ranging from
+                    verified rooms to laundry services and food recommendations.
+                  </p>
+                  <div class="subscribe-form m-b20">
+                    <form
+                      class="dzSubscribe"
+                      action="script/mailchamp.php"
+                      method="post"
+                    >
+                      <div class="dzSubscribeMsg"></div>
+                      <div class="input-group">
+                        <input
+                          name="dzEmail"
+                          required="required"
+                          class="form-control"
+                          placeholder="Your Email Address"
+                          type="email"
+                        />
+                        <span class="input-group-btn">
+                          <button
+                            name="submit"
+                            value="Submit"
+                            type="submit"
+                            class="site-button radius-xl"
+                          >
+                            Subscribe
+                          </button>
+                        </span>
+                      </div>
+                    </form>
+                  </div>
+                  <ul class="list-inline m-a0">
+                    <li>
+                      <a
+                        href="javascript:void(0);"
+                        class="site-button facebook circle"
+                        ><i class="fa fa-facebook"></i
+                      ></a>
+                    </li>
+                    <!-- <li><a href="javascript:void(0);" class="site-button google-plus circle "><i class="fa fa-google-plus"></i></a></li> -->
+                    <li>
+                      <a
+                        href="javascript:void(0);"
+                        class="site-button linkedin circle"
+                        ><i class="fa fa-linkedin"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0);"
+                        class="site-button instagram circle"
+                        ><i class="fa fa-instagram"></i
+                      ></a>
+                    </li>
+                    <!-- <li><a href="javascript:void(0);" class="site-button twitter circle "><i class="fa fa-twitter"></i></a></li> -->
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-5 col-md-7 col-sm-12 col-12">
+                <div class="widget border-0">
+                  <h5 class="m-b30 text-white">Frequently Asked Questions</h5>
+                  <ul class="list-2 list-line">
+                    <li><a href="javascript:void(0);">Verified Hostel</a></li>
+                    <li><a href="javascript:void(0);">Verified PG's</a></li>
+                    <li><a href="javascript:void(0);">Verified Flats</a></li>
+                    <li><a href="javascript:void(0);">Food Delivery</a></li>
+                    <li><a href="javascript:void(0);">Laundry</a></li>
+                    <li><a href="javascript:void(0);">Stationary</a></li>
+                    <li><a href="javascript:void(0);">Cab Services</a></li>
+                    <li><a href="javascript:void(0);">Bus Services</a></li>
+                    <li><a href="javascript:void(0);">Mobile Repairing</a></li>
+                    <li><a href="javascript:void(0);">Laptop Repairing</a></li>
+                    <li><a href="javascript:void(0);">Wifi Services</a></li>
+                    <li><a href="javascript:void(0);">Bike Rentals</a></li>
+                    <li><a href="javascript:void(0);">Courier Services</a></li>
+                    <li><a href="javascript:void(0);">Shoes Laundry</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-3 col-md-5 col-sm-12 col-12">
+                <div class="widget widget_getintuch">
+                  <h5 class="m-b30 text-white">Contact us</h5>
+                  <ul>
+                    <li>
+                      <i class="ti-location-pin"></i
+                      ><strong>address</strong> Bandra, Mumbai
+                    </li>
+                    <li>
+                      <i class="ti-mobile"></i><strong>phone</strong>8530392350
+                      (24/7 Support)
+                    </li>
+                    <li style="font-size: 0.7em">
+                      <i class="ti-email"></i
+                      ><strong>email</strong>Hello@roommate.techmihirnaik.in
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 text-center">
+                <span class="fbottom-like">
+                  © 2021 by techmihirnaik.in
+                  <a class="like-btn" href="javascript:void(0)"
+                    ><i class="fa fa-heart"></i
+                  ></a>
+                  Proudly created with techmihirnaik.in
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- Footer END-->
+      <button class="scroltop fa fa-chevron-up"></button>
+    </div>
+    <!-- JAVASCRIPT FILES ========================================= -->
+    <script src="static/student/js/jquery.min.js"></script>
+    <!-- JQUERY.MIN JS -->
+    <script src="static/student/plugins/bootstrap/js/popper.min.js"></script>
+    <!-- BOOTSTRAP.MIN JS -->
+    <script src="static/student/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- BOOTSTRAP.MIN JS -->
+    <script src="static/student/plugins/bootstrap-select/bootstrap-select.min.js"></script>
+    <!-- FORM JS -->
+    <script src="static/student/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script>
+    <!-- FORM JS -->
+    <script src="static/student/plugins/magnific-popup/magnific-popup.js"></script>
+    <!-- MAGNIFIC POPUP JS -->
+    <script src="static/student/plugins/counter/waypoints-min.js"></script>
+    <!-- WAYPOINTS JS -->
+    <script src="static/student/plugins/counter/counterup.min.js"></script>
+    <!-- COUNTERUP JS -->
+    <script src="static/student/plugins/imagesloaded/imagesloaded.js"></script>
+    <!-- IMAGESLOADED -->
+    <script src="static/student/plugins/masonry/masonry-3.1.4.js"></script>
+    <!-- MASONRY -->
+    <script src="static/student/plugins/masonry/masonry.filter.js"></script>
+    <!-- MASONRY -->
+    <script src="static/student/plugins/rangeslider/rangeslider.js"></script>
+    <!-- RANGESLIDER -->
+    <script src="static/student/plugins/owl-carousel/owl.carousel.js"></script>
+    <!-- OWL SLIDER -->
+    <script src="static/student/js/custom.js"></script>
+    <!-- CUSTOM FUCTIONS  -->
+    <script src="static/student/js/dz.carousel.js"></script>
+    <!-- SORTCODE FUCTIONS  -->
+    <script src="static/student/js/dz.ajax.js"></script>
+    <!-- CONTACT JS  -->
+  </body>
+</html>

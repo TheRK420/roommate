@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Payment Status</title>
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+        <section class="text-gray-600 body-font">
+            <div class="container px-5 py-24 mx-auto">
+                {% if success %}
+                <div class="flex flex-col text-center w-full mb-20">
+                    <i class="fa fa-check-circle" style="font-size:100px;color:#10b981"></i><br>
+                    <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">Payment Successful</h1>
+                </div>
+                {% else %}
+                <div class="flex flex-col text-center w-full mb-20">
+                    <i class="fa fa-times-circle" style="font-size:100px;color:#EF4444"></i><br>
+                    <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">Payment Failed</h1>
+                </div>
+                {% endif %}
+
+                <div class="lg:w-2/3 w-full mx-auto overflow-auto">
+                    <table class="table-auto w-full text-left whitespace-no-wrap">
+                        <thead>
+                            <tr>
+                                <th
+                                    class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">
+                                    Transaction Details</th>
+                                <th
+                                    class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">Order ID :</td>
+                                <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">{{id}}</td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">Transaction ID :</td>
+                                <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">{{response.TXNID}}</td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">Payment Mode :</td>
+                                <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">{{response.PAYMENTMODE}}</td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">Amount :</td>
+                                <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">{{response.TXNAMOUNT}}</td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">Transaction Date :</td>
+                                <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">{{response.TXNDATE}}</td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">Bank Transaction ID :</td>
+                                <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">{{response.BANKTXNID}}</td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">Bank Name :</td>
+                                <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">{{response.BANKNAME}}</td>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                {% if success %}
+                </div>
+                <div class="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto">
+                    <button
+                        class="flex mx-auto mt-16 text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg">Print</button>
+                    <button
+                        class="flex mx-auto mt-16 text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg"><a
+                            href="{% url 'listing' %}">Home</a></button>
+
+                </div>
+            </div>
+                {% else %}
+
+            </div>
+            <div class="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto">
+                <button
+                    class="flex mx-auto mt-16 text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg">Print</button>
+                <button
+                    class="flex mx-auto mt-16 text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg"><a
+                        href="{% url 'listing' %}">Home</a></button>
+            </div>
+            </div>
+            {% endif %}
+
+
+        </section>
+
+    </body>
+
+</html>

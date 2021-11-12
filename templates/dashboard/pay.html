@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	<meta name="robots" content="" />
+	<meta name="description" content="Roommates Directory & Listings HTML templates" />
+	<meta property="og:title" content="Roommates Directory & Listings HTML templates" />
+	<meta property="og:description" content="Roommates Directory & Listings HTML templates" />
+	<meta property="og:image" content="" />
+	<meta name="format-detection" content="telephone=no">
+
+	<!-- FAVICONS ICON -->
+	<link rel="icon" href="static/payment/images/roomlogo.jpeg" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="static/payment/images/roomlogo.jpeg" />
+
+	<!-- PAGE TITLE HERE -->
+	<title>Roommates </title>
+
+	<!-- MOBILE SPECIFIC -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- STYLESHEETS -->
+	<link rel="stylesheet" type="text/css" href="static/payment/plugins/calendar/calendar.css">
+	<link rel="stylesheet" type="text/css" href="static/payment/css/plugins.css">
+	<link rel="stylesheet" type="text/css" href="static/payment/css/style.css">
+	<link rel="stylesheet" type="text/css" href="static/payment/css/templete.css">
+	<link class="skin" rel="stylesheet" type="text/css" href="static/payment/css/skin/skin-1.css">
+	<link rel="stylesheet" type="text/css" href="static/payment/css/star-rating-svg.css">
+    <link rel="stylesheet" href="static/payment/css/paynow.css" >
+
+
+</head>
+
+<body id="bg">
+<div id="loading-area"></div>
+<div class="page-wraper">
+	<!-- header -->
+    <header class="site-header mo-left">
+		<!-- main header -->
+        <div class="sticky-header main-bar-wraper navbar-expand-lg">
+            <div class="main-bar clearfix ">
+                <div class="container clearfix">
+                    <!-- website logo -->
+                    <div class="logo-header mostion">
+						<a href="home.html" class="logo-1"><img src="static/payment/images/ROOMMATE-logo-black.png" alt=""></a>
+						<a href="home.html" class="logo-2"><img src="static/payment/images/ROOMMATE-logo-black.png" alt=""></a>
+					</div>
+                    <!-- nav toggle button -->
+                    <!-- <button class="navbar-toggler collapsed navicon justify-content-end" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button> -->
+                    <!-- extra nav -->
+                    <!-- <div class="extra-nav">
+                        <div class="extra-cell">
+                            <a href="register.html" class="site-button-link "><i class="ti-import m-r5 rotate90"></i> Sign In</a>
+							<a href="LET-US-CONNECT.html" class="site-button radius-xl m-l10"><i class="fa fa-plus m-r5"></i>My Account</a>
+                        </div>
+                    </div> -->
+                    <!-- main nav -->
+                    <!-- <div class="header-nav navbar-collapse collapse justify-content-end" id="navbarNavDropdown">
+                        <ul class="nav navbar-nav">
+							<li><a href="home.html">Home</a></li>
+							<li><a href="contact-us.html">Contact Us</a></li>
+						</ul>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <!-- main header END -->
+    </header>
+
+        <div class="section-full listing-details-content">
+            <div class="container">
+				<div class="tab-content">
+					<div id="listing_home" class="tab-pane active">
+						<div class="row" style="padding-top: 3em;">
+                            <div class="col-xl-12 left" style="padding: auto; max-width:500px;">
+                                <div class="heading">
+                                    <h3>Roommate</h3>
+                                </div>
+                                <div class="contactus">
+                                    <h6>Contact us</h6>
+                                    <div class="email">
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                        <span>payments@techmihirnaik.in</span>
+                                    </div>
+                                    <div class="phone">
+                                        <i class="fa fa-phone" aria-hidden="true"></i>
+                                        <span>8530392350</span>
+                                    </div>
+                                </div>
+                                <div class="footer-info">
+                                    <img src="static/payment/images/gallery/p5.png" alt="">
+                                    <p>Want to create payment pages for your business? Visit Razorpay&nbsp;Payment&nbsp;Pages and get started!</p>
+                                    <p>You agree to share information entered on this page with techmihirnaik (owner&nbsp;of&nbsp;this&nbsp;page) and Razorpay, adhering to applicable laws.</p>
+                                </div>
+                            </div>
+								<br><br><br>
+								<div class="col-xl-12" style="padding: auto; margin: auto; max-width:500px;">
+								<br><br><br>
+								<div class="content-box">
+									<div class="content-header">
+										<h3 class="title"></i><b>PAYMENT DETAILS</b> </h3>
+									</div>
+									<div class="login-form" style="padding: 20px 30px 10px 30px;">
+								<form class="dlab-form" id="rzp-button1" method="post">
+									<div class="form-group" >
+										<input name="dzName" required="" class="form-control"  value="{{n}}" type="text"/>
+										<!-- <h1>{{n}}</h1> -->
+									</div>
+									<div class="form-group">
+										<!-- <input name="email" required="" class="form-control" value={{user.email}}  type="text"/> -->
+										<input name="email" required="" class="form-control" value="{{test_email}}"  type="text"/>
+									</div>
+									<div class="form-group">
+										<input name="number" required="" class="form-control" value="{{contact}}" type="text"/>
+									</div>
+									<div class="form-group">
+										<button class="site-button button-md btn-block">Pay&nbsp;&nbsp;<i class="fa fa-inr" aria-hidden="true"></i> {{normal_amount}}
+                                        </button>
+									</div><br>
+									<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+										<script>
+										var options = {
+												"key": "rzp_test_MwnCyVMp8jNqyp",
+												"amount":"{{amount}}",// Enter the Key ID generated from the Dashboard
+												"name": "Acme Corp",
+												"description": "Test Transaction",
+												"image": "https://example.com/your_logo",
+												"order_id": "{{payment.id}}", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+												"handler": function (response){
+														//alert(response.razorpay_payment_id);
+														//alert(response.razorpay_order_id);
+														//alert(response.razorpay_signature);
+														document.location.href ="{% url 'p_a_complete' %}"
+												},
+												"prefill": {
+														"name": "{{n}}",
+														"email": "{{test_email}}",
+														"contact": "{{contact}}"
+												},
+												"notes": {
+														"address": "Razorpay Corporate Office"
+												},
+												"theme": {
+														"color": "#3399cc"
+												}
+										};
+										var rzp1 = new Razorpay(options);
+										rzp1.on('payment.failed', function (response){
+														alert(response.error.code);
+														alert(response.error.description);
+														alert(response.error.source);
+														alert(response.error.step);
+														alert(response.error.reason);
+														alert(response.error.metadata.order_id);
+														alert(response.error.metadata.payment_id);
+										});
+										document.getElementById('rzp-button1').onclick = function(e){
+												rzp1.open();
+												e.preventDefault();
+										}
+										</script>
+
+
+
+                                   <div class="row">
+                                   <div class="mr-auto">
+                                   <img src="static/payment/images/gallery/p1.png" id="pay" alt="" >
+                                   </div><br>
+                                   <div class="mr-auto">
+                                   <img src="static/payment/images/gallery/p2.png" id="pay" alt="" >
+                                   </div><br>
+                                   <div class="mr-auto">
+                                   <img src="static/payment/images/gallery/p3.jpg" id="pay" alt="" >
+                                   </div><br>
+                                   <div class="mr-auto">
+                                   <img src="static/payment/images/gallery/p4.jpg" id="pay" alt="" >
+                                   </div><br>
+                                   <div class="mr-auto">
+                                   <img src="static/payment/images/gallery/p5.png" id="pay" alt="">
+                                   </div><br>
+
+                                   </div>
+
+
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+    </div>
+    </div>
+    </div>
+
+    <!-- Footer END-->
+    <button class="scroltop fa fa-chevron-up" ></button>
+</div>
+<!-- JAVASCRIPT FILES ========================================= -->
+<script src="static/payment/js/jquery.min.js"></script><!-- JQUERY.MIN JS -->
+<script src="static/payment/plugins/bootstrap/js/popper.min.js"></script><!-- BOOTSTRAP.MIN JS -->
+<script src="static/payment/plugins/bootstrap/js/bootstrap.min.js"></script><!-- BOOTSTRAP.MIN JS -->
+<script src="static/payment/plugins/bootstrap-select/bootstrap-select.min.js"></script><!-- FORM JS -->
+<script src="static/payment/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script><!-- FORM JS -->
+<script src="static/payment/plugins/magnific-popup/magnific-popup.js"></script><!-- MAGNIFIC POPUP JS -->
+<script src="static/payment/plugins/counter/waypoints-min.js"></script><!-- WAYPOINTS JS -->
+<script src="static/payment/plugins/counter/counterup.min.js"></script><!-- COUNTERUP JS -->
+<script src="static/payment/plugins/imagesloaded/imagesloaded.js"></script><!-- IMAGESLOADED -->
+<script src="static/payment/plugins/masonry/masonry-3.1.4.js"></script><!-- MASONRY -->
+<script src="static/payment/plugins/masonry/masonry.filter.js"></script><!-- MASONRY -->
+<script src="static/payment/plugins/rangeslider/rangeslider.js"></script><!-- RANGESLIDER -->
+<script src="static/payment/plugins/owl-carousel/owl.carousel.js"></script><!-- OWL SLIDER -->
+<script src="static/payment/js/custom.js"></script><!-- CUSTOM FUCTIONS  -->
+<script src="static/payment/js/dz.carousel.js"></script><!-- SORTCODE FUCTIONS  -->
+<script src="static/payment/js/dz.ajax.js"></script><!-- CONTACT JS  -->
+
+</body>
+</html>

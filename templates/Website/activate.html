@@ -1,0 +1,12 @@
+
+{% autoescape off %}
+
+
+Hi {{user}}
+
+Please Click on the link below to pay the booking amount of Rs. {{amount}}
+
+http://{{domain}}{% url 'payment_final' uidb64=uid amount=amount category=category hostel_name=hostel_name token=token %}
+
+{% endautoescape %}
+

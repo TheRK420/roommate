@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	<meta name="robots" content="" />
+	<meta name="description" content="Roommates Directory & Listings HTML templates" />
+	<meta property="og:title" content="Roommates Directory & Listings HTML templates" />
+	<meta property="og:description" content="Roommates Directory & Listings HTML templates" />
+	<meta property="og:image" content="" />
+	<meta name="format-detection" content="telephone=no">
+
+	<!-- FAVICONS ICON -->
+	<link rel="icon" href="static/roommate/images/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="static/roommate/images/favicon.png" />
+
+	<!-- PAGE TITLE HERE -->
+	<title>Roommates Directory & Listings HTML templates</title>
+
+	<!-- MOBILE SPECIFIC -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- STYLESHEETS -->
+	<link rel="stylesheet" type="text/css" href="static/roommate/css/plugins.css">
+	<link rel="stylesheet" type="text/css" href="static/roommate/css/style.css">
+	<link rel="stylesheet" type="text/css" href="static/roommate/css/templete.css">
+	<link class="skin" rel="stylesheet" type="text/css" href="static/roommate/css/skin/skin-1.css">
+
+
+</head>
+<body id="bg">
+<div id="loading-area"></div>
+<div class="page-wraper">
+	<!-- Content -->
+    <div class="page-content dlab-login bg-primary" style="background-image: url(static/roommate/images/background/bg7.jpg); background-position: top right; background-blend-mode: screen;
+   ">
+        <div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-4 login-form-box">
+					<div class="login-form">
+						<div class="logo">
+							<a href="index.html"><img src="static/roommate/images/ROOMMATE-logo-black.png" alt=""/></a>
+						</div>
+						<div class="tab-content nav">
+							<div id="login" class="tab-pane active">
+								<form class="dlab-form" action="{% url 'setpass' m=m %}" method="POST">
+									{% csrf_token %}
+									<h3 class="form-title m-t0">Set New password</h3>
+
+									<div class="form-group">
+										<input name="np" required="" class="form-control " placeholder="New Password" type="password"/>
+									</div>
+                                    <div class="form-group">
+										<input name="rnp" required="" class="form-control " placeholder="Confirm Password" type="password"/>
+									</div>
+									<div class="form-group">
+										<button class="site-button btn-block button-md">Set password</button>
+                                    </div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-8">
+					<div class="content-info">
+						<ul class="list-info">
+							<li>
+								<div class="dlab-box">
+									<i class="fa fa-bullhorn"></i>
+									<p>Get personalized advice from the friends and travel experts you trust</p>
+								</div>
+							</li>
+							<li>
+								<div class="dlab-box">
+									<i class="fa fa-car"></i>
+									<p>Easily find hotels, things to do & restaurants that are right for you</p>
+								</div>
+							</li>
+							<li>
+								<div class="dlab-box">
+									<i class="fa fa-check"></i>
+									<p>It's everything you need to know</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+    <!-- Content END-->
+    <button class="scroltop fa fa-chevron-up" ></button>
+</div>
+<!-- JAVASCRIPT FILES ========================================= -->
+<script src="static/roommate/js/jquery.min.js"></script><!-- JQUERY.MIN JS -->
+<script src="static/roommate/plugins/bootstrap/js/popper.min.js"></script><!-- BOOTSTRAP.MIN JS -->
+<script src="static/roommate/plugins/bootstrap/js/bootstrap.min.js"></script><!-- BOOTSTRAP.MIN JS -->
+<script src="static/roommate/plugins/bootstrap-select/bootstrap-select.min.js"></script><!-- FORM JS -->
+<script src="static/roommate/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script><!-- FORM JS -->
+<script src="static/roommate/plugins/magnific-popup/magnific-popup.js"></script><!-- MAGNIFIC POPUP JS -->
+<script src="static/roommate/plugins/counter/waypoints-min.js"></script><!-- WAYPOINTS JS -->
+<script src="static/roommate/plugins/counter/counterup.min.js"></script><!-- COUNTERUP JS -->
+<script src="static/roommate/plugins/imagesloaded/imagesloaded.js"></script><!-- IMAGESLOADED -->
+<script src="static/roommate/plugins/masonry/masonry-3.1.4.js"></script><!-- MASONRY -->
+<script src="static/roommate/plugins/masonry/masonry.filter.js"></script><!-- MASONRY -->
+<script src="static/roommate/plugins/rangeslider/rangeslider.js"></script><!-- RANGESLIDER -->
+<script src="static/roommate/plugins/owl-carousel/owl.carousel.js"></script><!-- OWL SLIDER -->
+<script src="static/roommate/js/custom.js"></script><!-- CUSTOM FUCTIONS  -->
+<script src="static/roommate/js/dz.carousel.js"></script><!-- SORTCODE FUCTIONS  -->
+<script src="static/roommate/js/dz.ajax.js"></script><!-- CONTACT JS  -->
+</body>
+</html>

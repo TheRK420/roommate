@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	<meta name="robots" content="" />
+	<meta name="description" content="Roommates Directory & Listings HTML templates" />
+	<meta property="og:title" content="Roommates Directory & Listings HTML templates" />
+	<meta property="og:description" content="Roommates Directory & Listings HTML templates" />
+	<meta property="og:image" content="" />
+	<meta name="format-detection" content="telephone=no">
+
+	<!-- FAVICONS ICON -->
+	<link rel="icon" href="static/student/images/roomlogo.jpeg" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="static/student/images/roomlogo.jpeg" />
+
+	<!-- PAGE TITLE HERE -->
+	<title>Roommates </title>
+
+	<!-- MOBILE SPECIFIC -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- STYLESHEETS -->
+	<link rel="stylesheet" type="text/css" href="static/student/css/plugins.css">
+	<link rel="stylesheet" type="text/css" href="static/student/css/style.css">
+	<link rel="stylesheet" type="text/css" href="static/student/css/templete.css">
+	<link class="skin" rel="stylesheet" type="text/css" href="static/student/css/skin/skin-1.css">
+	<link rel="stylesheet" href="static/student/css/all.min.css">
+	<script src="https://kit.fontawesome.com/8695d3e87f.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body id="bg">
+<div id="loading-area"></div>
+<div class="page-wraper">
+	<!-- header -->
+    <header class="site-header mo-left">
+		<!-- main header -->
+        <div class="sticky-header main-bar-wraper navbar-expand-lg">
+            <div class="main-bar clearfix ">
+                <div class="container clearfix">
+                    <!-- website logo -->
+                    <div class="logo-header mostion">
+						<a href="home.html" class="logo-1"><img src="static/student/images/ROOMMATE-logo-black.png" alt=""></a>
+						<a href="home.html" class="logo-2"><img src="static/student/images/ROOMMATE-logo-black.png" alt=""></a>
+					</div>
+                    <!-- nav toggle button -->
+                    <button class="navbar-toggler collapsed navicon justify-content-end" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+                    <!-- extra nav -->
+                    <div class="extra-nav">
+                        <div class="extra-cell">
+													{% if x %}
+                            <a href="{% url 'logout' %}" class="site-button-link black"><i class="ti-import m-r5 rotate90"></i> Logout</a>
+													{% else %}
+													<a href="register.html" class="site-button-link black"><i class="ti-import m-r5 rotate90"></i> Sign In</a>
+													{% endif %}
+							<a href="{% url 'myprofile' %}" class="site-button radius-xl m-l10"><i class="fa fa-plus m-r5"></i> My profile</a>
+                        </div>
+                    </div>
+                    <!-- main nav -->
+                    <div class="header-nav navbar-collapse collapse justify-content-end" id="navbarNavDropdown">
+                        <ul class="nav navbar-nav">
+							<li><a href="home.html">Home</a></li>
+							<!--<li class="down active"><a href="home.html">Home <i class="fa fa-chevron-down"></i></a>-->
+								<!--<ul class="sub-menu">
+									<li><a href="home.html">Home 1</a></li>
+									<li><a href="index-2.html">Home 2<span class="tag-new">New</span></a></li>
+									<li><a href="index-3.html">Home 3<span class="tag-new">New</span></a></li>
+								</ul> -->
+							</li>
+							<!---<li class="down"><a href="#">Pages <i class="fa fa-chevron-down"></i></a>
+								<ul class="sub-menu">
+									<li><a href="coming-soon.html">Coming Soon</a></li>
+									<li><a href="error-404.html">Error 404</a></li>
+									<li><a href="contact-us.html">Contact Us</a></li>
+									<li><a href="register.html">Register<span class="tag-new">New</span></a></li>
+								</ul>
+							</li>
+							<li class="down"><a href="#">Listings <i class="fa fa-chevron-down"></i></a>
+								<ul class="sub-menu">
+									<li><a href="LET-US-CONNECT.html">LET US CONNECT<span class="tag-new">New</span></a></li>
+									<li><a href="#">Listings <i class="fa fa-angle-right"></i></a>
+										<ul class="sub-menu">
+											<li><a href="listing.html">Listing</a></li>
+											<li><a href="listing-left-sidebar.html">Listing Left Sidebar</a></li>
+											<li><a href="listing-right-sidebar.html">Listing Right Sidebar</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Listing Grid <i class="fa fa-angle-right"></i></a>
+										<ul class="sub-menu">
+											<li><a href="listing-grid-left-sidebar.html">Left Sidebar</a></li>
+											<li><a href="listing-grid-right-sidebar.html">Right Sidebar</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Listing Map <i class="fa fa-angle-right"></i></a>
+										<ul class="sub-menu">
+											<li><a href="listing-grid-map-left-sidebar.html">Left Sidebar</a></li>
+											<li><a href="listing-grid-map-right-sidebar.html">Right Sidebar</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Listing Details <i class="fa fa-angle-right"></i></a>
+										<ul class="sub-menu">--->
+											<!---<li><a href="listing-details.html">Listing Details 1</a></li>
+											<li><a href="listing-details-2.html">Listing Details 2<span class="tag-new">New</span></a></li>--->
+											<!---<li><a href="listing-details-3.html">Listing Details 3<span class="tag-new"></span></a></li>
+										</ul>
+									</li>
+								</ul>--->
+							</li>
+							<li><a href="contact-us.html">Contact Us</a></li>
+						</ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- main header END -->
+    </header>
+    <!-- header END -->
+    <!-- Content -->
+    <div class="page-content bg-white">
+        <!-- Section Banner -->
+		<div class="dlab-bnr-inr dlab-bnr-inr-md" style="background-color: #19004D; background-size: cover;">
+            <div class="container">
+                <div class="dlab-bnr-inr-entry align-m dlab-home">
+					<div class="bnr-content">
+						<h2><strong>Find & Get</strong> Your Dream Place.</h2>
+					</div>
+					<div class="dlab-tabs search-filter">
+						<!--<ul class="nav nav-tabs">
+							<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#place">
+								<i class="fa fa-map-marker"></i> <span class="title-head">Place</span></a></li>
+							<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#party">
+								<i class="fa fa-music"></i> <span class="title-head">Party</span></a></li>
+							<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#restauren">
+								<i class="fa fa-glass"></i> <span class="title-head">Restauren</span></a></li>
+						</ul>-->
+						<div class="tab-content">
+							<div id="place" class="tab-pane active">
+								<form>
+									<div class="input-group">
+										<input type="text" class="form-control" placeholder="What are you looking for?">
+										<div class="form-control">
+											<select>
+												<option>Select Category</option>
+												<option>Verified Hostels</option>
+												<option>Verified PG's</option>
+												<option>Verified Flats</option>
+												<option>Food Delivery(Monthly Tiffin or Pay and order)</option>
+												<option>Laundry at door step</option>
+												<option>Stationary at door step</option>
+												<option>Car Services</option>
+												<option>Mobile Repairing</option>
+												<option>Laptops Repairing</option>
+												<option>Bus Services for PG's/Flats</option>
+												<option>Wifi for PG's/Flats</option>
+												<option>Bike Rentals</option>
+												<option>Courier Service</option>
+												<option>Shoes Laundry</option>
+											</select>
+										</div>
+										<div class="input-group-prepend">
+											<button class="site-button text-uppercase"><i class="fa m-r5 fa-search"></i> Search</button>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div id="party" class="tab-pane">
+								<form>
+									<div class="input-group">
+										<input type="text" class="form-control" placeholder="What are you looking for?">
+										<div class="form-control">
+											<select>
+												<option>Select Category</option>
+												<option>Verified Hostels</option>
+												<option>Verified PG's</option>
+												<option>Verified Flats</option>
+												<option>Food Delivery(Monthly Tiffin or Pay and order)</option>
+												<option>Laundry at door step</option>
+												<option>Stationary at door step</option>
+												<option>Car Services</option>
+												<option>Mobile Repairing</option>
+												<option>Laptops Repairing</option>
+												<option>Bus Services for PG's/Flats</option>
+												<option>Wifi for PG's/Flats</option>
+												<option>Bike Rentals</option>
+												<option>Courier Service</option>
+												<option>Shoes Laundry</option>
+											</select>
+										</div>
+										<div class="input-group-prepend">
+											<button class="site-button text-uppercase"><i class="fa m-r5 fa-search"></i> Search</button>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div id="restauren" class="tab-pane">
+								<form>
+									<div class="input-group">
+										<input type="text" class="form-control" placeholder="What are you looking for?">
+										<div class="form-control">
+											<select>
+												<option>Select Category</option>
+												<option>Verified Hostels</option>
+												<option>Verified PG's</option>
+												<option>Verified Flats</option>
+												<option>Food Delivery(Monthly Tiffin or Pay and order)</option>
+												<option>Laundry at door step</option>
+												<option>Stationary at door step</option>
+												<option>Car Services</option>
+												<option>Mobile Repairing</option>
+												<option>Laptops Repairing</option>
+												<option>Bus Services for PG's/Flats</option>
+												<option>Wifi for PG's/Flats</option>
+												<option>Bike Rentals</option>
+												<option>Courier Service</option>
+												<option>Shoes Laundry</option>
+											</select>
+										</div>
+										<div class="input-group-prepend">
+											<button class="site-button text-uppercase"><i class="fa m-r5 fa-search"></i> Search</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<!-- <p class="text-center text-white m-b10 m-t30">Find awesome places, bars, restaurants & activities.</p> -->
+					</div>
+
+					<div class="category-bx">
+						<!-- <a href="coming-soon.html" class="category">
+							<i class="fas fa-house-user"></i>
+							<p> Verified Hostels</p>
+						</a>
+						<a href="coming-soon.html" class="category">
+							<i class="fas fa-home"></i>
+							<p>Verified PG's</p>
+						</a>
+						<a href="coming-soon.html" class="category">
+							<i class="fas fa-house-user"></i>
+							<p>Verified Flats</p>
+						</a> -->
+						<a href="coming-soon.html" class="category">
+							<i class="fas fa-house-user"></i>
+							<p>ACCOMMODATION</p>
+						</a>
+						<a href="coming-soon.html" class="category">
+							<i class="fas fa-pizza-slice"></i>
+							<p>Food </p>
+						</a>
+						<a href="coming-soon.html" class="category">
+							<i class="fas fa-tshirt"></i>
+							<p>Laundary </p>
+						</a>
+						<!-- <a href="coming-soon.html" class="category">
+							<i class="fas fa-taxi"></i>
+							<p>Cab </p>
+						</a>
+						<a href="coming-soon.html" class="category">
+							<i class="fas fa-mobile-alt"></i>
+							<p>Mobile Repairing</p>
+						</a>
+						<a href="coming-soon.html" class="category">
+							<i class="fas fa-laptop"></i>
+							<p>Laptops Repairing</p>
+						</a> -->
+
+						<a href="coming-soon.html" class="category">
+							<i class="fas fa-bus"></i>
+							<p>Cab/Bus </p>
+						</a>
+						<!-- <a href="coming-soon.html" class="category">
+							<i class="fas fa-wifi"></i>
+							<p>Wifi Services</p>
+						</a>
+						<a href="coming-soon.html" class="category">
+							<i class="fas fa-motorcycle"></i>
+							<p>Bike Rentals</p>
+						</a> -->
+						<a href="coming-soon.html" class="category">
+							<i class="fas fa-laptop"></i>
+							<p>Technical</p>
+						</a>
+						<a href="coming-soon.html" class="category">
+							<i class="fas fa-mail-bulk"></i>
+							<p>Courier </p>
+						</a>
+						<a href="coming-soon.html" class="category">
+							<i class="flaticon-place"></i>
+							<p>Stationary </p>
+						</a>
+						<!-- <a href="coming-soon.html" class="category">
+							<i class="fas fa-shoe-prints"></i>
+							<p>Shoes Laundry</p>
+						</a> -->
+					</div>
+				</div>
+            </div>
+        </div>
+		<!-- Section Banner END -->
+		<!-- Search Filter -->
+		<div class="section-full">
+			<div class="container">
+
+			</div>
+		</div>
+		<!-- Search Filter END -->
+		<div class="content-block">
+            <!-- Featured Destinations -->
+            <div class="section-full bg-white content-inner">
+                <div class="container">
+					<div class="section-head text-black text-center">
+
+						<h2 class="box-title">Trending</h2>
+						<div class="dlab-separator bg-primary"></div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+					</div>
+                    <div class="row">
+						<div class="col-lg-3 col-md-6 col-sm-6">
+							<div class="featured-bx m-b30">
+								<div class="featured-media">
+									<img src="https://images.pexels.com/photos/5137985/pexels-photo-5137985.jpeg?cs=srgb&dl=pexels-cottonbro-5137985.jpg&fm=jpg" alt=""/>
+								</div>
+								<div class="featured-info">
+									<ul class="featured-star">
+										<li><i class="fa fa-star"></i></li>
+										<li><i class="fa fa-star"></i></li>
+										<li><i class="fa fa-star"></i></li>
+										<li><i class="fa fa-star"></i></li>
+										<li><i class="fa fa-star"></i></li>
+									</ul>
+									<h5 class="title"><a href="LISTING-DETAILS-3Signin.html">Living PG</a></h5>
+									<ul class="featured-category">
+										<li><i class="fa fa-moon-o"></i> 12 Cities</li>
+										<li><i class="fa fa-map-o"></i> 30+ Listing</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-6">
+							<div class="featured-bx m-b30">
+								<div class="featured-media">
+									<img src="https://images.pexels.com/photos/5158948/pexels-photo-5158948.jpeg?cs=srgb&dl=pexels-cottonbro-5158948.jpg&fm=jpg" alt=""/>
+								</div>
+								<div class="featured-info">
+									<ul class="featured-star">
+										<li><i class="fa fa-star"></i></li>
+										<li><i class="fa fa-star"></i></li>
+										<li><i class="fa fa-star"></i></li>
+										<li><i class="fa fa-star"></i></li>
+										<li><i class="fa fa-star"></i></li>
+									</ul>
+									<h5 class="title"><a href="LISTING-DETAILS-3Signin.html">Bosco PG For Men</a></h5>
+									<ul class="featured-category">
+										<li><i class="fa fa-moon-o"></i> 12 Cities</li>
+										<li><i class="fa fa-map-o"></i> 30+ Listing</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-6">
+							<div class="featured-bx m-b30">
+								<div class="featured-media">
+									<img src="https://images.pexels.com/photos/5137981/pexels-photo-5137981.jpeg?cs=srgb&dl=pexels-cottonbro-5137981.jpg&fm=jpg" height="500px" alt=""/>
+								</div>
+								<div class="featured-info">
+									<ul class="featured-star">
+										<li><i class="fa fa-star"></i></li>
+										<li><i class="fa fa-star"></i></li>
+										<li><i class="fa fa-star"></i></li>
+										<li><i class="fa fa-star"></i></li>
+										<li><i class="fa fa-star"></i></li>
+									</ul>
+									<h5 class="title"><a href="LISTING-DETAILS-3Signin.html">Amber Living PG</a></h5>
+									<ul class="featured-category">
+										<li><i class="fa fa-moon-o"></i> 12 Cities</li>
+										<li><i class="fa fa-map-o"></i> 30+ Listing</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-6">
+							<div class="featured-bx m-b30">
+									<img src="https://images.pexels.com/photos/5158963/pexels-photo-5158963.jpeg?cs=srgb&dl=pexels-cottonbro-5158963.jpg&fm=jpg" alt=""/>
+								<div class="featured-media">
+								</div>
+								<div class="featured-info">
+									<ul class="featured-star">
+										<li><i class="fa fa-star"></i></li>
+										<li><i class="fa fa-star"></i></li>
+										<li><i class="fa fa-star"></i></li>
+										<li><i class="fa fa-star"></i></li>
+										<li><i class="fa fa-star"></i></li>
+									</ul>
+									<h5 class="title"><a href="LISTING-DETAILS-3Signin.html">Mashoor Living PG</a></h5>
+									<ul class="featured-category">
+										<li><i class="fa fa-moon-o"></i> 12 Cities</li>
+										<li><i class="fa fa-map-o"></i> 30+ Listing</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+            </div>
+			<!-- Featured Destinations End -->
+			<!-- Our Services -->
+			<div class="section-full bg-gray content-inner about-us">
+                <div class="container-fluid">
+					<div class="section-head text-black text-center">
+						<h2 class="box-title"><a href="./listing.html">ACCOMMODATION'S </a></h2>
+						<div class="dlab-separator bg-primary"></div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+					</div>
+					<div class="most-visite owl-carousel owl-btn-center-lr owl-btn-1 primary">
+
+
+						<div class="item">
+							<div class="listing-bx featured-star-left m-b30">
+								<div class="listing-media">
+									<img src="{{ room.image1.url }}">
+									<ul class="featured-star">
+										<li><i class="fa fa-star"></i></li>
+										<li><i class="fa fa-star"></i></li>
+										<li><i class="fa fa-star"></i></li>
+										<li><i class="fa fa-star"></i></li>
+										<li><i class="fa fa-star"></i></li>
+									</ul>
+								</div>
+								<div class="listing-info">
+									<h3 class="title"><a href="{% url 'details' hostel='room' %}">{{ room.hostel_name }}</a></h3>
+									<p>{{ room.facilities }}</p>
+									<ul class="place-info">
+										<li class="place-location"><i class="fa fa-map-marker"></i>12/a, New</li>
+										<li class="open"><i class="fa fa-check"></i>Open Now</li>
+									</ul>
+								</div>
+								<ul class="wish-bx">
+									<li><a class="like-btn" href="javascript:void(0)"><i class="fa fa-heart"></i></a></li>
+									<li><a class="info-btn" href="javascript:void(0)"><i class="fa fa-leaf"></i></a></li>
+								</ul>
+							</div>
+						</div>
+
+
+
+					</div>
+				</div>
+				<div class="abc">
+				<span class="input-group-btn">
+										<button name="submit" value="Submit" type="submit"
+											class="site-button radius-xl"><a href ="{% url 'listing' %}"class="show-more">SHOW MORE</a></button>
+									</span>
+								</div>
+			</div>
+            <!-- Our Services -->
+			<!-- Why Choose Us -->
+			<div class="section-full bg-img-fix most-visited content-inner overlay-primary-dark"
+				style="background-image:url(images/background/bg1.jpg);">
+				<div class="container">
+					<div class="section-head text-white text-center">
+						<h2 class="box-title">How It Works?</h2>
+						<div class="dlab-separator bg-white"></div>
+						<p>Easy in-hand working is what we prior the most, so let's have a look at how does our app work for you.</p>
+					</div>
+					<div class="row">
+						<div class="col-lg-4 col-md-4">
+							<div class="icon-bx-wraper sr-box center box1 m-b30">
+								<div class="icon-bx-lg radius bg-white m-b20"><a href="javascript:void(0)"
+										class="icon-cell text-primary"><i class="ti-search"></i></a> </div>
+								<div class="icon-content">
+									<h3 class="dlab-tilte">Choose What To Do?</h3>
+									<p>The first thing you need is to get yourself registered with your mail or number and procure the id you can use every time you log in.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4">
+							<div class="icon-bx-wraper sr-box center  m-b30">
+								<div class="icon-bx-lg radius bg-white m-b20"><a href="javascript:void(0)"
+										class="icon-cell text-primary"><i class="ti-gift"></i></a> </div>
+								<div class="icon-content">
+									<h3 class="dlab-tilte">Find What Your Want?</h3>
+									<p> Food? laundry? cab/bus? technical assistance? courier? stationary? just think and it'll be done for you.<br><br> </p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4">
+							<div class="icon-bx-wraper sr-box center box1 m-b30">
+								<div class="icon-bx-lg radius bg-white m-b20"><a href="javascript:void(0)"
+										class="icon-cell text-primary"><i class="ti-rocket"></i></a> </div>
+								<div class="icon-content">
+									<h3 class="dlab-tilte">Explore Amazing Places</h3>
+									<p>Having us at your rescue, lay your hands back and make most of your time.<br><br><br></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Why Chose Us End -->
+			<!--at a glance-->
+			<div class="section-full bg-white content-inner-2">
+				<div class="container-fluid">
+					<div class="section-head text-black text-center">
+						<h2 class="box-title">At a Glance</h2>
+						<div class="dlab-separator bg-primary"></div>
+						<p>Get all our verified services within your time and premium quality, have a look.</p>
+					</div>
+					<div class="row m-lr0 featured-style2-area">
+						<div class="col-lg-4 col-md-12 p-lr0">
+							<div class="row m-lr0">
+								<div class="col-lg-12 col-md-4 col-sm-12 p-lr0">
+									<div class="featured-bx style2">
+										<div class="featured-media">
+											<img src="static/student/images/featured/pic1.png" alt="">
+											<div class="featured-type featured-top">
+												TOP <br>FEATURED
+											</div>
+										</div>
+										<div class="featured-content text-white">
+											<h2 class="title"><a href="#">Hostels</a></h2>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-4 col-sm-6 p-lr0">
+									<div class="featured-bx style2">
+										<div class="featured-media">
+											<img src="static/student/images/featured/pic2.png" alt="">
+										</div>
+										<div class="featured-content text-white">
+											<h2 class="title"><a href="#">Pg's</a></h2>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-4 col-sm-6 p-lr0">
+									<div class="featured-bx style2">
+										<div class="featured-media">
+											<img src="static/student/images/featured/pic3.png" alt="">
+										</div>
+										<div class="featured-content text-white">
+											<h2 class="title"><a href="#">Flats</a></h2>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-12 p-lr0">
+							<div class="row m-lr0">
+								<div class="col-lg-6 col-md-4 col-sm-6 p-lr0">
+									<div class="featured-bx style2">
+										<div class="featured-media">
+											<img src="static/student/images/featured/pic4.png" alt="">
+										</div>
+										<div class="featured-content text-white">
+											<h2 class="title"><a href="#">Foods</a></h2>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-4 col-sm-6 p-lr0">
+									<div class="featured-bx style2">
+										<div class="featured-media">
+											<img src="static/student/images/featured/pic5.png" alt="">
+										</div>
+										<div class="featured-content text-white">
+											<h2 class="title"><a href="#">Laundary</a></h2>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-12 col-md-4 col-sm-12 p-lr0">
+									<div class="featured-bx style2">
+										<div class="featured-media">
+											<img src="static/student/images/featured/pic6.png" alt="">
+											<div class="featured-type featured-trading">
+												<i class="fa fa-bolt"></i>
+											</div>
+										</div>
+										<div class="featured-content text-white">
+											<h2 class="title"><a href="https://www.teams.techmihirnaik.in/cab-booking">Cab/Bus</a></h2>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-12 p-lr0">
+							<div class="row m-lr0">
+								<div class="col-lg-12 col-md-4 col-sm-12 p-lr0">
+									<div class="featured-bx style2">
+										<div class="featured-media">
+											<img src="static/student/images/featured/pic7.png" alt="">
+										</div>
+										<div class="featured-content text-white">
+											<h2 class="title"><a href="#">Technical </a></h2>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-4 col-sm-6 p-lr0">
+									<div class="featured-bx style2">
+										<div class="featured-media">
+											<img src="static/student/images/featured/pic8.png" alt="">
+										</div>
+										<div class="featured-content text-white">
+											<h2 class="title"><a href="#">Courier</a></h2>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-4 col-sm-6 p-lr0">
+									<div class="featured-bx style2">
+										<div class="featured-media">
+											<img src="static/student/images/featured/pic9.png" alt="">
+										</div>
+										<div class="featured-content text-white">
+											<h2 class="title"><a href="#">Stationary</a></h2>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--at a glance ends-->
+			<!-- Our Portfolio -->
+			<div class="section-full content-inner bg-gray">
+                <div class="container">
+					<div class="section-head text-center">
+						<h2 class="box-title">What Our Users Say</h2>
+						<div class="dlab-separator bg-primary"></div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+					</div>
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="row">
+								<div id="owl-demo" class="testimonial-one owl-loaded owl-theme owl-carousel owl-btn-center-lr owl-btn-3 owl-dots-primary-big">
+									<div class="item">
+										<div class="client-box">
+											<div class="client-detail">
+												<div class="client-img">
+													<img src="static/student/images/testimonials/pic1.jpg" width="100" height="100" alt="">
+												</div>
+												<div class="client-info">
+													<h5 class="client-name">Diamond Anderson</h5>
+													<span>Founder, uihub inc.</span>
+												</div>
+											</div>
+											<div class="client-info-bx">
+												<h5>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. </h5>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="client-box">
+											<div class="client-detail">
+												<div class="client-img">
+													<img src="static/student/images/testimonials/pic2.jpg" width="100" height="100" alt="">
+												</div>
+												<div class="client-info">
+													<h5 class="client-name">Diamond Anderson</h5>
+													<span>Founder, uihub inc.</span>
+												</div>
+											</div>
+											<div class="client-info-bx">
+												<h5>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. </h5>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="client-box">
+											<div class="client-detail">
+												<div class="client-img">
+													<img src="static/student/images/testimonials/pic3.jpg" width="100" height="100" alt="">
+												</div>
+												<div class="client-info">
+													<h5 class="client-name">Diamond Anderson</h5>
+													<span>Founder, uihub inc.</span>
+												</div>
+											</div>
+											<div class="client-info-bx">
+												<h5>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. </h5>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+            </div>
+			<!-- Our Portfolio END -->
+			<!-- Featured Destinations -->
+            <div class="section-full bg-white content-inner">
+                <!--
+                <div class="container">
+					<div class="section-head text-black text-center">
+						<h2 class="box-title">From The Blog</h2>
+						<div class="dlab-separator bg-primary"></div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+					</div>
+                    <div class="blog-carousel owl-carousel owl-none blog-shadow-out">
+						<div class="item">
+							<div class="blog-post dez-blog">
+								<div class="dlab-post-media">
+									<a href="blog-details.html"><img src="images/blog/grid/pic1.jpg" alt=""/></a>
+								</div>
+								<div class="dlab-info">
+									<div class="category-tag">
+										<a href="blog-details.html">Tarvel</a>
+									</div>
+									<div class="dlab-post-title ">
+										<h5 class="post-title"><a href="blog-details.html">7 Moments To Remember From Directory.</a></h5>
+									</div>
+									<div class="dlab-post-text">
+									   <p>Achieving only 1 out of the 4 (traffic, opt-in, conversion, email) doesn’t do much help either.</p>
+									</div>
+									<div class="dlab-post-meta">
+										<ul>
+											<li class="post-author"><i class="icon-user"></i>By <a href="blog-details.html">John Doe</a> </li>
+											<li class="post-comment"><i class="icon-speech"></i> <a href="blog-details.html">12 Comments</a> </li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="blog-post dez-blog">
+								<div class="dlab-post-media">
+									<a href="blog-details.html"><img src="images/blog/grid/pic3.jpg" alt=""/></a>
+								</div>
+								<div class="dlab-info">
+									<div class="category-tag">
+										<a href="blog-details.html">Foods</a>
+									</div>
+									<div class="dlab-post-title ">
+										<h5 class="post-title"><a href="blog-details.html">Directory Will Be A Thing Of The Past.</a></h5>
+									</div>
+									<div class="dlab-post-text">
+									   <p>Knowing that, you’ve optimised your pages countless amount of times, written tons of eye catching.</p>
+									</div>
+									<div class="dlab-post-meta">
+										<ul>
+											<li class="post-author"><i class="icon-user"></i>By <a href="blog-details.html">Rosalina</a> </li>
+											<li class="post-comment"><i class="icon-speech"></i> <a href="blog-details.html">08 Comments</a> </li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="blog-post dez-blog">
+								<div class="dlab-post-media">
+									<a href="blog-details.html"><img src="images/blog/grid/pic2.jpg" alt=""/></a>
+								</div>
+								<div class="dlab-info">
+									<div class="category-tag">
+										<a href="blog-details.html">Hotel</a>
+									</div>
+									<div class="dlab-post-title ">
+										<h5 class="post-title"><a href="blog-details.html">Ten Things Your Competitors Know About.</a></h5>
+									</div>
+									<div class="dlab-post-text">
+									   <p>As desperate as you are right now, you have done everything you can on your website to say.</p>
+									</div>
+									<div class="dlab-post-meta">
+										<ul>
+											<li class="post-author"><i class="icon-user"></i>By <a href="blog-details.html">John Smith</a> </li>
+											<li class="post-comment"><i class="icon-speech"></i> <a href="blog-details.html">03 Comments</a> </li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+            </div>
+			<!-- Featured Destinations End -->
+        </div>
+		<!-- contact area END -->
+    </div> -->
+    <!-- Content END-->
+	<!-- Footer -->
+<footer class="site-footer">
+	<div class="footer-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-5 col-lg-4 col-md-12 col-sm-12">
+					<div class="widget">
+						<img src="static/student/images/ROOMMATE-logo-white.png" class="m-b15" alt="" width="180">
+						<p class="text-capitalize m-b20">We are a group of young entrepreneurs seeking to change
+							the country and create jobs. In our venture we are now here with a new subsidiary
+							company ROOMMATE. A service that will look after all students and staff who leave
+							their homes to improve their lives. ROOMMATE is here to make their stays comfortable
+							and better, providing services ranging from verified rooms to laundry services and
+							food recommendations.</p>
+						<div class="subscribe-form m-b20">
+							<form class="dzSubscribe" action="script/mailchamp.php" method="post">
+								<div class="dzSubscribeMsg"></div>
+								<div class="input-group">
+									<input name="dzEmail" required="required" class="form-control"
+										placeholder="Your Email Address" type="email">
+									<span class="input-group-btn">
+										<button name="submit" value="Submit" type="submit"
+											class="site-button radius-xl">Subscribe</button>
+									</span>
+								</div>
+							</form>
+						</div>
+						<ul class="list-inline m-a0">
+							<li><a href="javascript:void(0);" class="site-button facebook circle "><i
+										class="fa fa-facebook"></i></a></li>
+							<!-- <li><a href="javascript:void(0);" class="site-button google-plus circle "><i class="fa fa-google-plus"></i></a></li> -->
+							<li><a href="javascript:void(0);" class="site-button linkedin circle "><i
+										class="fa fa-linkedin"></i></a></li>
+							<li><a href="javascript:void(0);" class="site-button instagram circle "><i
+										class="fa fa-instagram"></i></a></li>
+							<!-- <li><a href="javascript:void(0);" class="site-button twitter circle "><i class="fa fa-twitter"></i></a></li> -->
+						</ul>
+					</div>
+				</div>
+				<div class="col-xl-4 col-lg-5 col-md-7 col-sm-12 col-12">
+					<div class="widget border-0">
+						<h5 class="m-b30 text-white">Frequently Asked Questions</h5>
+						<ul class="list-2 list-line">
+							<li><a href="javascript:void(0);">Verified Hostel</a></li>
+							<li><a href="javascript:void(0);">Verified PG's</a></li>
+							<li><a href="javascript:void(0);">Verified Flats</a></li>
+							<li><a href="javascript:void(0);">Food Delivery</a></li>
+							<li><a href="javascript:void(0);">Laundry</a></li>
+							<li><a href="javascript:void(0);">Stationary</a></li>
+							<li><a href="javascript:void(0);">Cab Services</a></li>
+							<li><a href="javascript:void(0);">Bus Services</a></li>
+							<li><a href="javascript:void(0);">Mobile Repairing</a></li>
+							<li><a href="javascript:void(0);">Laptop Repairing</a></li>
+							<li><a href="javascript:void(0);">Wifi Services</a></li>
+							<li><a href="javascript:void(0);">Bike Rentals</a></li>
+							<li><a href="javascript:void(0);">Courier Services</a></li>
+							<li><a href="javascript:void(0);">Shoes Laundry</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-3 col-md-5 col-sm-12 col-12">
+					<div class="widget widget_getintuch">
+						<h5 class="m-b30 text-white">Contact us</h5>
+						<ul>
+							<li><i class="ti-location-pin"></i><strong>address</strong> Bandra, Mumbai</li>
+							<li><i class="ti-mobile"></i><strong>phone</strong>8530392350 (24/7 Support)</li>
+							<li><i class="ti-email"></i><strong>email</strong>hello@techmihirnaik.in</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<span class="fbottom-like"> © 2021 by techmihirnaik.in <a class="like-btn"
+							href="javascript:void(0)"><i class="fa fa-heart"></i></a> Proudly created with
+						techmihirnaik.in </span>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+    <!-- Footer END-->
+    <button class="scroltop fa fa-chevron-up" ></button>
+</div>
+<!-- JAVASCRIPT FILES ========================================= -->
+<script src="static/student/js/jquery.min.js"></script><!-- JQUERY.MIN JS -->
+<script src="static/student/plugins/bootstrap/js/popper.min.js"></script><!-- BOOTSTRAP.MIN JS -->
+<script src="static/student/plugins/bootstrap/js/bootstrap.min.js"></script><!-- BOOTSTRAP.MIN JS -->
+<script src="static/student/plugins/bootstrap-select/bootstrap-select.min.js"></script><!-- FORM JS -->
+<script src="static/student/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script><!-- FORM JS -->
+<script src="static/student/plugins/magnific-popup/magnific-popup.js"></script><!-- MAGNIFIC POPUP JS -->
+<script src="static/student/plugins/counter/waypoints-min.js"></script><!-- WAYPOINTS JS -->
+<script src="static/student/plugins/counter/counterup.min.js"></script><!-- COUNTERUP JS -->
+<script src="static/student/plugins/imagesloaded/imagesloaded.js"></script><!-- IMAGESLOADED -->
+<script src="static/student/plugins/masonry/masonry-3.1.4.js"></script><!-- MASONRY -->
+<script src="static/student/plugins/masonry/masonry.filter.js"></script><!-- MASONRY -->
+<script src="static/student/plugins/rangeslider/rangeslider.js"></script><!-- RANGESLIDER -->
+<script src="static/student/plugins/owl-carousel/owl.carousel.js"></script><!-- OWL SLIDER -->
+<script src="static/student/js/custom.js"></script><!-- CUSTOM FUCTIONS  -->
+<script src="static/student/js/dz.carousel.js"></script><!-- SORTCODE FUCTIONS  -->
+<script src="static/student/js/dz.ajax.js"></script><!-- CONTACT JS  -->
+
+</body>
+</html>

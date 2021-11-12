@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="" />
+  <meta name="robots" content="" />
+  <meta name="description" content="Roommates" />
+  <meta property="og:title" content="Roommates" />
+  <meta property="og:description" content="Roommates" />
+  <meta property="og:image" content="" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <!-- FAVICONS ICON
+	<!-- <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" /> -->
+
+  <!-- PAGE TITLE HERE -->
+  <title>Roommates</title>
+
+  <!-- MOBILE SPECIFIC -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- STYLESHEETS -->
+  <link rel="stylesheet" type="text/css" href="static/roommate/css/plugins.css" />
+  <link rel="stylesheet" type="text/css" href="static/roommate/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="static/roommate/css/templete.css" />
+  <link class="skin" rel="stylesheet" type="text/css" href="static/roommate/css/skin/skin-1.css" />
+  <link rel="stylesheet" href="static/roommate/css/all.min.css" />
+  <script src="https://kit.fontawesome.com/8695d3e87f.js" crossorigin="anonymous"></script>
+
+  <!-- REVOLUTION STYLE SHEETS -->
+  <link rel="stylesheet" type="text/css" href="static/roommate/plugins/revolution/revolution/css/settings.css" />
+  <link rel="stylesheet" type="text/css" href="static/roommate/plugins/revolution/revolution/css/layers.css" />
+  <link rel="stylesheet" type="text/css" href="static/roommate/plugins/revolution/revolution/css/navigation.css" />
+</head>
+
+<body id="bg">
+  <div class="page-wraper">
+    <!-- header -->
+    <header class="site-header main-bar-wraper mo-left">
+      <!-- main header -->
+      <div class="sticky-header main-bar-wraper navbar-expand-lg">
+        <div class="main-bar clearfix">
+          <div class="container clearfix">
+            <!-- website logo -->
+            <div class="logo-header mostion">
+              <a href="" class="logo-1"><img src="static/roommate/images/ROOMMATE-logo-black.png" alt="" /></a>
+              <a href="" class="logo-2"><img src="static/roommate/images/ROOMMATE-logo-black.png" alt="Roommates" /></a>
+            </div>
+            <!-- nav toggle button -->
+            <button class="navbar-toggler collapsed navicon justify-content-end" type="button" data-toggle="collapse"
+              data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <!-- extra nav -->
+            <div class="extra-nav">
+              <div class="extra-cell">
+                <a href="logout.html" class="site-button-link white"><i class="ti-import m-r5 rotate90"></i> Logout</a>
+                <!-- <a href="{% url 'kyc' %}" class="site-button radius-xl m-l10"><i
+										class="fa fa-plus m-r5"></i> LET US CONNECT</a> -->
+              </div>
+            </div>
+            <!-- main nav -->
+            <div class="header-nav navbar-collapse collapse justify-content-end" id="navbarNavDropdown">
+              <ul class="nav navbar-nav">
+                <li>
+                  <a href="home.html">Home</a>
+                  <!--<ul class="sub-menu">
+									<li><a href="index.html">Home 1</a></li>
+									 <li><a href="index-2.html">Home 2<span class="tag-new">New</span></a></li>
+									<li><a href="index-3.html">Home 3<span class="tag-new">New</span></a></li>
+								</ul>-->
+                </li>
+                <li class="down">
+                  <a href="#">Services <i class="fa fa-chevron-down"></i></a>
+                  <ul class="sub-menu">
+                    <li>
+                      <p class="serv">Hostels</p>
+                    </li>
+                    <li>
+                      <p class="serv">PG's</p>
+                    </li>
+                    <li>
+                      <p class="serv">Flats</p>
+                    </li>
+                    <li>
+                      <p class="serv">Food Delivery</p>
+                    </li>
+                    <li>
+                      <p class="serv">Laundary Service</p>
+                    </li>
+                    <li>
+                      <p class="serv">Cab Service</p>
+                    </li>
+                    <li>
+                      <p class="serv">Mobile Repairing</p>
+                    </li>
+                    <li>
+                      <p class="serv">Laptop Repairing</p>
+                    </li>
+                    <li>
+                      <p class="serv">Bus Service</p>
+                    </li>
+                    <li>
+                      <p class="serv">Wifi Service</p>
+                    </li>
+                    <li>
+                      <p class="serv">Bike Rental</p>
+                    </li>
+                    <li>
+                      <p class="serv">Courier Service</p>
+                    </li>
+                    <li>
+                      <p class="serv">Shoes Laundry</p>
+                    </li>
+                  </ul>
+                </li>
+
+                <li><a href="contact">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- main header END -->
+    </header>
+    <div id="loading-area">
+      <div class="la-anim-10"></div>
+    </div>
+
+  </div>
+
+
+  <div class="page-content bg-white">
+    <!-- Section Banner -->
+    <div class="dlab-bnr-inr dlab-bnr-inr-md bnr-style1" style="
+          background-image: linear-gradient(
+              rgba(45, 0, 95, 88%),
+              rgba(20, 39, 81, 0.58)
+            ),
+            url(static/roommate/images/collage.png);
+          background-size: cover;
+        " id="dezParticles">
+      <div class="container">
+        <div class="dlab-bnr-inr-entry align-m dlab-home">
+          <div class="bnr-content">
+            <h2>ROOMMATE</h2>
+            <p>Your Stay Our Responsibility</p>
+          </div>
+          <!-- <div class="search-filter filter-style1">
+            <form>
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="What are you looking for?" />
+                <input type="text" class="form-control" placeholder="Location" />
+                <div class="form-control">
+                  <select>
+                    <option>Verified Hostels</option>
+                    <option>Verified Pg's</option>
+                    <option>Verified Flats</option>
+                    <option>Food Delivery</option>
+                    <option>Laundary Service</option>
+                    <option>Cab Service</option>
+                    <option>Mobile Repairing</option>
+                    <option>Laptop Repairing</option>
+                    <option>Bus Service</option>
+                    <option>Wifi Service</option>
+                    <option>Bike Rental</option>
+                    <option>Courier Service</option>
+                    <option>Shoes Laundary</option>
+                  </select>
+                </div>
+                <div class="input-group-prepend">
+                  <button class="site-button">Search</button>
+                </div>
+              </div>
+            </form>
+          </div> -->
+          <div class="category-bx">
+            <a href="{% url 'kyc' %}" class="category">
+							<i class="fas fa-house-user"></i>
+							<p>Rooms(KYC)</p>
+						</a>
+						<a href="#" class="category">
+							<i class="fas fa-pizza-slice"></i>
+							<p>Food </p>
+						</a>
+						<a href="#" class="category">
+							<i class="fas fa-tshirt"></i>
+							<p>Laundary </p>
+						</a>
+
+						<a href="#" class="category">
+							<i class="fas fa-bus"></i>
+							<p>Cab/Bus </p>
+						</a>
+						
+						<a href="#" class="category">
+							<i class="fas fa-laptop"></i>
+							<p>Technical</p>
+						</a>
+						<a href="#" class="category">
+							<i class="fas fa-mail-bulk"></i>
+							<p>Courier </p>
+						</a>
+						<a href="#" class="category">
+							<i class="flaticon-place"></i>
+							<p>Stationary </p>
+						</a>
+          </div>
+          <div class="navbar scroll-button">
+            <a href="#page_content" class="site-button button-style1 scroll"><i class="la la-long-arrow-down"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-block" id="page_content">
+    <!-- Featured Destinations -->
+    <div class="section-full bg-white content-inner-2" style="background-image:url(static/roommate/images/pt4.png);">
+      <div class="container-fluid">
+        <div class="section-head text-black text-center">
+          <h2 class="box-title">At a Glance</h2>
+          <div class="dlab-separator bg-primary"></div>
+          <p>
+            Get all our verified services within your time and premium
+            quality, have a look.
+          </p>
+        </div>
+        <div class="row m-lr0 featured-style2-area">
+          <div class="col-lg-4 col-md-12 p-lr0">
+            <div class="row m-lr0">
+              <div class="col-lg-12 col-md-4 col-sm-12 p-lr0">
+                <div class="featured-bx style2">
+                  <div class="featured-media">
+                    <a href="{% url 'kyc' %}">
+                      <img src="static/roommate/images/featured/pic1.png" alt="" />
+                    </a>
+                    <div class="featured-type featured-top">
+                      TOP <br />FEATURED
+                    </div>
+                  </div>
+                  <div class="featured-content text-white">
+                    <h2 class="title">
+                      <a href="{% url 'kyc' %}">Hostels</a>
+                    </h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-4 col-sm-6 p-lr0">
+                <div class="featured-bx style2">
+                  <div class="featured-media">
+                    <a href="{% url 'kyc' %}">
+                      <img src="static/roommate/images/featured/pic2.png" alt="" />
+                    </a>
+                  </div>
+                  <div class="featured-content text-white">
+                    <h2 class="title"><a href="{% url 'kyc' %}">Pg's</a></h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-4 col-sm-6 p-lr0">
+                <div class="featured-bx style2">
+                  <div class="featured-media">
+                    <a href="{% url 'kyc' %}">
+                      <img src="static/roommate/images/featured/pic3.png" alt="" />
+                    </a>
+                  </div>
+                  <div class="featured-content text-white">
+                    <h2 class="title"><a href="#">Flats</a></h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12 p-lr0">
+            <div class="row m-lr0">
+              <div class="col-lg-6 col-md-4 col-sm-6 p-lr0">
+                <div class="featured-bx style2">
+                  <div class="featured-media">
+                    <img src="static/roommate/images/featured/pic4.png" alt="" />
+                  </div>
+                  <div class="featured-content text-white">
+                    <h2 class="title"><a href="#">Foods</a></h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-4 col-sm-6 p-lr0">
+                <div class="featured-bx style2">
+                  <div class="featured-media">
+                    <img src="static/roommate/images/featured/pic5.png" alt="" />
+                  </div>
+                  <div class="featured-content text-white">
+                    <h2 class="title"><a href="#">Laundary</a></h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12 col-md-4 col-sm-12 p-lr0">
+                <div class="featured-bx style2">
+                  <div class="featured-media">
+                    <img src="static/roommate/images/featured/pic6.png" alt="" />
+                    <div class="featured-type featured-trading">
+                      <i class="fa fa-bolt"></i>
+                    </div>
+                  </div>
+                  <div class="featured-content text-white">
+                    <h2 class="title">
+                      <a href="https://www.teams.techmihirnaik.in/cab-booking">Cab/Bus</a>
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12 p-lr0">
+            <div class="row m-lr0">
+              <div class="col-lg-12 col-md-4 col-sm-12 p-lr0">
+                <div class="featured-bx style2">
+                  <div class="featured-media">
+                    <img src="static/roommate/images/featured/pic7.png" alt="" />
+                  </div>
+                  <div class="featured-content text-white">
+                    <h2 class="title"><a href="#">Technical </a></h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-4 col-sm-6 p-lr0">
+                <div class="featured-bx style2">
+                  <div class="featured-media">
+                    <img src="static/roommate/images/featured/pic8.png" alt="" />
+                  </div>
+                  <div class="featured-content text-white">
+                    <h2 class="title"><a href="#">Courier</a></h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-4 col-sm-6 p-lr0">
+                <div class="featured-bx style2">
+                  <div class="featured-media">
+                    <img src="static/roommate/images/featured/pic9.png" alt="" />
+                  </div>
+                  <div class="featured-content text-white">
+                    <h2 class="title"><a href="#">Stationary</a></h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Featured Destinations End -->
+    <!-- Why Choose Us -->
+    <div class="
+          section-full
+          bg-img-fix
+          most-visited
+          content-inner
+          overlay-primary-dark
+        " style="background-image: url(static/roommate/images/background/bg1.jpg)">
+      <div class="container">
+        <div class="section-head text-white text-center">
+          <h2 class="box-title">How It Works?</h2>
+          <div class="dlab-separator bg-white"></div>
+          <p>
+            Easy in-hand working is what we prior the most, so let's have a
+            look at how does our app work for you.
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-4">
+            <div class="icon-bx-wraper sr-box center box1 m-b30">
+              <div class="icon-bx-lg radius bg-white m-b20">
+                <a href="javascript:void(0)" class="icon-cell text-primary"><i class="ti-search"></i></a>
+              </div>
+              <div class="icon-content">
+                <h3 class="dlab-tilte">Choose What To Do?</h3>
+                <p>
+                  The first thing you need is to get yourself registered with
+                  your mail or number and procure the id you can use every
+                  time you log in.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <div class="icon-bx-wraper sr-box center m-b30">
+              <div class="icon-bx-lg radius bg-white m-b20">
+                <a href="javascript:void(0)" class="icon-cell text-primary"><i class="ti-gift"></i></a>
+              </div>
+              <div class="icon-content">
+                <h3 class="dlab-tilte">Find What Your Want?</h3>
+                <p>
+                  food? laundry? cab/bus? technical assistance? courier?
+                  stationary? just think and it'll be done for you.<br /><br />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <div class="icon-bx-wraper sr-box center box1 m-b30">
+              <div class="icon-bx-lg radius bg-white m-b20">
+                <a href="javascript:void(0)" class="icon-cell text-primary"><i class="ti-rocket"></i></a>
+              </div>
+              <div class="icon-content">
+                <h3 class="dlab-tilte">Explore Amazing Places</h3>
+                <p>
+                  having us at your rescue, lay your hands back and make most
+                  of your time.<br /><br /><br />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Why Chose Us End -->
+    <!-- Featured Destinations -->
+    <div class="section-full bg-gray-1 content-inner owl-out"style="background-image:url(static/roommate/images/pt4.png);">
+      <div class="container">
+        <div class="section-head text-black text-center">
+          <h2 class="box-title">Services We Provide</h2>
+          <div class="dlab-separator bg-black"></div>
+          <p>
+            Who'd go running across the city when you get most and best of
+            what you need just at one click, we provide you services ranging
+            from a to z.
+          </p>
+        </div>
+        <div class="
+              blog-carousel
+              owl-carousel owl-btn-2
+              primary
+              owl-btn-center-lr
+            ">
+          <div class="item">
+            <div class="blog-post dez-blog info-height">
+              <div class="dlab-post-media">
+                <a href="#"><img src="static/roommate/images/blog/grid/pic1.png" alt="" /></a>
+              </div>
+              <div class="dlab-info">
+                <div class="category-tag">
+                  <a href="#">Stop offs/ Room Services</a>
+                </div>
+                <div class="dlab-post-title">
+                  <h5 class="post-title">
+                    <a href="#">
+                      Verified Stay- feel like a home away from home</a>
+                  </h5>
+                </div>
+                <div class="dlab-post-text">
+                  <p>
+                    get rooms and hostels just the way you like them, to feel
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="blog-post dez-blog info-height">
+              <div class="dlab-post-media">
+                <a href="#"><img src="static/roommate/images/blog/grid/pic2.png" alt="" /></a>
+              </div>
+              <div class="dlab-info">
+                <div class="category-tag">
+                  <a href="#">Food Services</a>
+                </div>
+                <div class="dlab-post-title">
+                  <h5 class="post-title">
+                    <a href="#"> Weekly and monthly tiffin service</a>
+                  </h5>
+                </div>
+                <div class="dlab-post-text">
+                  <p>
+                    No more wait for 'Ghar ka khana', we serve it with a pinch
+                    of extra love.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="blog-post dez-blog info-height">
+              <div class="dlab-post-media">
+                <a href="#"><img src="static/roommate/images/blog/grid/pic3.png" alt="" /></a>
+              </div>
+              <div class="dlab-info">
+                <div class="category-tag">
+                  <a href="#">Laundary Services</a>
+                </div>
+                <div class="dlab-post-title">
+                  <h5 class="post-title"><a href="#">Shine well</a></h5>
+                </div>
+                <div class="dlab-post-text">
+                  <p>
+                    Relax... We have your laundry list, we'll get it done :)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="blog-post dez-blog info-height">
+              <div class="dlab-post-media">
+                <a href="https://www.teams.techmihirnaik.in/cab-booking"><img
+                    src="static/roommate/images/blog/grid/pic4.png" alt="" /></a>
+              </div>
+              <div class="dlab-info">
+                <div class="category-tag">
+                  <a href="https://www.teams.techmihirnaik.in/cab-booking">Cabs/Bus Services</a>
+                </div>
+                <div class="dlab-post-title">
+                  <h5 class="post-title">
+                    <a href="#">Airport pick up and drop facility.</a>
+                  </h5>
+                </div>
+                <div class="dlab-post-text">
+                  <p>
+                    We provide good alternatives for public transport, so you
+                    won't have traffic problems.<br /><br /><br />
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="blog-post dez-blog info-height">
+              <div class="dlab-post-media">
+                <a href="#"><img src="static/roommate/images/blog/grid/pic5.png" alt="" /></a>
+              </div>
+              <div class="dlab-info">
+                <div class="category-tag">
+                  <a href="#">Technical Services</a>
+                </div>
+                <div class="dlab-post-title">
+                  <h5 class="post-title">
+                    <a href="#">Laptop Repairing & Mobile Repairing</a>
+                  </h5>
+                </div>
+                <div class="dlab-post-text">
+                  <p>
+                    having a presentation to complete and your laptop broke?
+                    no worries we are here with our best tech support team to
+                    help you out.<br /><br />
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="blog-post dez-blog info-height">
+              <div class="dlab-post-media">
+                <a href="#"><img src="static/roommate/images/blog/grid/pic6.png" alt="" /></a>
+              </div>
+              <div class="dlab-info">
+                <div class="category-tag">
+                  <a href="#">Courier Services</a>
+                </div>
+                <div class="dlab-post-title">
+                  <h5 class="post-title">
+                    <a href="#"> A one door stop for all your needs</a>
+                  </h5>
+                </div>
+                <div class="dlab-post-text">
+                  <p>
+                    Promised delivery, because we know the worth of your
+                    time.<br /><br /><br /><br />
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="blog-post dez-blog info-height">
+              <div class="dlab-post-media">
+                <a href="#"><img src="static/roommate/images/blog/grid/pic7.png" alt="" /></a>
+              </div>
+              <div class="dlab-info">
+                <div class="category-tag">
+                  <a href="#">Stationary</a>
+                </div>
+                <div class="dlab-post-title">
+                  <h5 class="post-title">
+                    <a href="#">stationery, and other daily necessities</a>
+                  </h5>
+                </div>
+                <div class="dlab-post-text">
+                  <p>
+                    Everything went online and took away the habit of paper
+                    and pen, didn't it? no worries, get things right from
+                    prints to pens here from us.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Featured Destinations End -->
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-5 col-lg-4 col-md-12 col-sm-12">
+              <div class="widget">
+                <img src="static/roommate/images/ROOMMATE-logo-white.png" class="m-b15" alt="" width="180" />
+                <p class="text-capitalize m-b20">
+                  We are a group of young entrepreneurs seeking to change the
+                  country and create jobs. In our venture we are now here with
+                  a new subsidiary company ROOMMATE. A service that will look
+                  after all students and staff who leave their homes to
+                  improve their lives. ROOMMATE is here to make their stays
+                  comfortable and better, providing services ranging from
+                  verified rooms to laundry services and food recommendations.
+                </p>
+                <div class="subscribe-form m-b20">
+                  <form class="dzSubscribe" action="script/mailchamp.php" method="post">
+                    <div class="dzSubscribeMsg"></div>
+                    <div class="input-group">
+                      <input name="dzEmail" required="required" class="form-control" placeholder="Your Email Address"
+                        type="email" />
+                      <span class="input-group-btn">
+                        <button name="submit" value="Submit" type="submit" class="site-button radius-xl">
+                          Subscribe
+                        </button>
+                      </span>
+                    </div>
+                  </form>
+                </div>
+                <ul class="list-inline m-a0">
+                  <li>
+                    <a href="javascript:void(0);" class="site-button facebook circle"><i class="fa fa-facebook"></i></a>
+                  </li>
+                  <!-- <li><a href="javascript:void(0);" class="site-button google-plus circle "><i class="fa fa-google-plus"></i></a></li> -->
+                  <li>
+                    <a href="javascript:void(0);" class="site-button linkedin circle"><i class="fa fa-linkedin"></i></a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);" class="site-button instagram circle"><i
+                        class="fa fa-instagram"></i></a>
+                  </li>
+                  <!-- <li><a href="javascript:void(0);" class="site-button twitter circle "><i class="fa fa-twitter"></i></a></li> -->
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-5 col-md-7 col-sm-12 col-12">
+              <div class="widget border-0">
+                <h5 class="m-b30 text-white">Frequently Asked Questions</h5>
+                <ul class="list-2 list-line">
+                  <li><a href="javascript:void(0);">Verified Hostel</a></li>
+                  <li><a href="javascript:void(0);">Verified PG's</a></li>
+                  <li><a href="javascript:void(0);">Verified Flats</a></li>
+                  <li><a href="javascript:void(0);">Food Delivery</a></li>
+                  <li><a href="javascript:void(0);">Laundry</a></li>
+                  <li><a href="javascript:void(0);">Stationary</a></li>
+                  <li><a href="javascript:void(0);">Cab Services</a></li>
+                  <li><a href="javascript:void(0);">Bus Services</a></li>
+                  <li><a href="javascript:void(0);">Mobile Repairing</a></li>
+                  <li><a href="javascript:void(0);">Laptop Repairing</a></li>
+                  <li><a href="javascript:void(0);">Wifi Services</a></li>
+                  <li><a href="javascript:void(0);">Bike Rentals</a></li>
+                  <li><a href="javascript:void(0);">Courier Services</a></li>
+                  <li><a href="javascript:void(0);">Shoes Laundry</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-5 col-sm-12 col-12">
+              <div class="widget widget_getintuch">
+                <h5 class="m-b30 text-white">Contact us</h5>
+                <ul>
+                  <li>
+                    <i class="ti-location-pin"></i><strong>address</strong> Bandra, Mumbai
+                  </li>
+                  <li>
+                    <i class="ti-mobile"></i><strong>phone</strong>8530392350
+                    (24/7 Support)
+                  </li>
+                  <li style="font-size: 0.7em">
+                    <i class="ti-email"></i
+                    ><strong>email</strong>Hello@roommate.techmihirnaik.in
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <span class="fbottom-like">
+                © 2021 by techmihirnaik.in
+                <a class="like-btn" href="javascript:void(0)"><i class="fa fa-heart"></i></a>
+                Proudly created with techmihirnaik.in
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer END-->
+    <button class="scroltop fa fa-chevron-up"></button>
+  </div>
+
+  <!-- JAVASCRIPT FILES ========================================= -->
+  <script src="static/roommate/js/jquery.min.js"></script>
+  <!-- JQUERY.MIN JS -->
+  <script src="static/roommate/plugins/bootstrap/js/popper.min.js"></script>
+  <!-- BOOTSTRAP.MIN JS -->
+  <script src="static/roommate/plugins/bootstrap/js/bootstrap.min.js"></script>
+  <!-- BOOTSTRAP.MIN JS -->
+  <script src="static/roommate/plugins/bootstrap-select/bootstrap-select.min.js"></script>
+  <!-- FORM JS -->
+  <script src="static/roommate/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script>
+  <!-- FORM JS -->
+  <script src="static/roommate/plugins/magnific-popup/magnific-popup.js"></script>
+  <!-- MAGNIFIC POPUP JS -->
+  <script src="static/roommate/plugins/counter/waypoints-min.js"></script>
+  <!-- WAYPOINTS JS -->
+  <script src="static/roommate/plugins/counter/counterup.min.js"></script>
+  <!-- COUNTERUP JS -->
+  <script src="static/roommate/plugins/imagesloaded/imagesloaded.js"></script>
+  <!-- IMAGESLOADED -->
+  <script src="static/roommate/plugins/masonry/masonry-3.1.4.js"></script>
+  <!-- MASONRY -->
+  <script src="static/roommate/plugins/masonry/masonry.filter.js"></script>
+  <!-- MASONRY -->
+  <script src="static/roommate/plugins/rangeslider/rangeslider.js"></script>
+  <!-- RANGESLIDER -->
+  <script src="static/roommate/plugins/owl-carousel/owl.carousel.js"></script>
+  <!-- OWL SLIDER -->
+  <script src="static/roommate/js/custom.js"></script>
+  <!-- CUSTOM FUCTIONS  -->
+  <script src="static/roommate/js/dz.carousel.js"></script>
+  <!-- SORTCODE FUCTIONS  -->
+  <script src="static/roommate/js/dz.ajax.js"></script>
+  <!-- CONTACT JS  -->
+
+  <!-- REVOLUTION JS FILES -->
+  <script src="static/roommate/plugins/revolution/revolution/js/jquery.themepunch.tools.min.js"></script>
+  <script src="static/roommate/plugins/revolution/revolution/js/jquery.themepunch.revolution.min.js"></script>
+  <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+  <script
+    src="static/roommate/plugins/revolution/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+  <script
+    src="static/roommate/plugins/revolution/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+  <script
+    src="static/roommate/plugins/revolution/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+  <script
+    src="static/roommate/plugins/revolution/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+  <script
+    src="static/roommate/plugins/revolution/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+  <script
+    src="static/roommate/plugins/revolution/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+  <script
+    src="static/roommate/plugins/revolution/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+  <script
+    src="static/roommate/plugins/revolution/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+  <script src="static/roommate/plugins/revolution/revolution/js/extensions/revolution.extension.video.min.js"></script>
+  <!-- TYPEWRITER AND COMING SOON ADD ON -->
+  <!-- <script src="static/roommate/plugins/revolution/revolution-addons/typewriter/js/revolution.addon.typewriter.min.js"></script>
+	<script src="static/roommate/plugins/revolution/revolution-addons/countdown/revolution.addon.countdown.min.js"></script>
+	<script>
+		var tpj = jQuery;
+		var revapi152;
+		tpj(document).ready(function () {
+			if (tpj("#rev_slider_152_1").revolution == undefined) {
+				revslider_showDoubleJqueryError("#rev_slider_152_1");
+			} else {
+				revapi152 = tpj("#rev_slider_152_1").show().revolution({
+					sliderType: "standard",
+					jsFileLocation: "//server.local/revslider/wp-content/plugins/revslider/public/assets/js/",
+					sliderLayout: "fullscreen",
+					dottedOverlay: "none",
+					delay: 9000,
+					navigation: {
+					},
+					responsiveLevels: [1240, 1024, 778, 480],
+					visibilityLevels: [1240, 1024, 778, 480],
+					gridwidth: [1240, 1024, 778, 480],
+					gridheight: [868, 768, 960, 720],
+					lazyType: "none",
+					shadow: 0,
+					spinner: "off",
+					autoHeight: "off",
+					fullScreenAutoWidth: "off",
+					fullScreenAlignForce: "off",
+					fullScreenOffsetContainer: "",
+					fullScreenOffset: "",
+					disableProgressBar: "on",
+					hideThumbsOnMobile: "off",
+					hideSliderAtLimit: 0,
+					hideCaptionAtLimit: 0,
+					hideAllCaptionAtLilmit: 0,
+					debugMode: false,
+					fallbacks: {
+						simplifyAll: "off",
+						disableFocusListener: false,
+					}
+				});
+			}
+
+			var targetdate = new Date().getTime() + 864000000 // i.e. '2020/12/31 24:00',
+			slidechanges = [
+				{ days: 0, hours: 0, minutes: 0, seconds: 12, slide: 2 },
+				{ days: 0, hours: 0, minutes: 0, seconds: 0, slide: 3 }
+			];
+
+			tp_countdown(revapi152, targetdate, slidechanges);
+
+			RsTypewriterAddOn(tpj, revapi152);
+		});
+	</script> -->
+</body>
+
+</html>

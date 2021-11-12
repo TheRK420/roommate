@@ -1,0 +1,44 @@
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  margin-top: 3em;
+  margin-bottom: 2em;
+  padding-left: 2em;
+}
+.left .heading h3 {
+  color: #0d2366;
+  font-size: normal;
+}
+
+.left .contactus h6 {
+  color: #0d2366;
+}
+
+.left .contactus {
+  margin-top: auto;
+  color: #0d2366;
+  padding-bottom: 3em;
+}
+
+.left .contactus .email,
+.left .contactus .phone {
+  font-size: 0.8em;
+  padding-bottom: 1em;
+}
+
+.left .footer-info {
+  font-size: 0.78em;
+  border-top: 0.1em solid rgb(201, 201, 201);
+}
+
+.left .footer-info img {
+  height: 7em;
+  margin-bottom: -2em;
+  margin-top: -1em;
+}
+
+.left .footer-info p {
+  line-height: 1.5em;
+}
